@@ -5,11 +5,6 @@ import { Link } from "wouter";
 export default function SearchGifs() {
   const [query, setQuery] = useState("");
 
-  // let onOnclickHandler = (e) => {
-  //   setKeyword(query);
-  //   return query;
-  // };
-
   return (
     <div className="search-bar">
       <input

@@ -2,13 +2,30 @@ import React from "react";
 import Gif from "./Gif";
 import { useEffect, useState } from "react";
 import getGifs from "../services/getGifs";
+import "./Loading.css";
 
 export default function ListOfGifs({ params }) {
+  const [loading, setLoading] = useState(true);
+
   const { keyword } = params;
   const [gifs, setGifs] = useState([]);
   useEffect(() => {
-    getGifs({ keyword }).then((gifs) => setGifs(gifs));
+    setLoading(true);
+    getGifs({ keyword }).then((gifs) => {
+      setGifs(gifs);
+      setLoading(false);
+    });
   }, [keyword]);
+
+  if (loading) {
+    return (
+      <div>
+        <div className="fulfilling-square-spinner">
+          <div className="spinner-inner"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
