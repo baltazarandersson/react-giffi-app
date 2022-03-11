@@ -10,6 +10,9 @@
 
 ### Getting intro Routers
 
-## Demo image of the App running :
+## Demo video of the App running :
 
-![img](https://i.imgur.com/ge5hvCU.png)
+
+
+https://user-images.githubusercontent.com/21319545/157921296-435ea913-f28f-419c-956b-18978aba8aa2.mp4
+
