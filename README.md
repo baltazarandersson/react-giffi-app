@@ -4,9 +4,9 @@
 
 ### Getting involved with React
 
-### Continuing learning about fetch and APIs
+### Continuing learning about fetch and web APIs
 
-### Learn about JSX
+### Getting intro JSX
 
 ### Getting intro Routers
 
