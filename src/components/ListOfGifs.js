@@ -5,23 +5,25 @@ import getGifs from "../services/getGifs";
 import "./Loading.css";
 
 export default function ListOfGifs({ params }) {
-  const [loading, setLoading] = useState(true);
-
+  // const [loading, setLoading] = useState(false);
+  // const [gifs, setGifs] = useState([]);
+  const [gifsState, setGifsState] = useState({ loading: false, gifs: [] });
   const { keyword } = params;
-  const [gifs, setGifs] = useState([]);
+
   useEffect(() => {
-    setLoading(true);
+    setGifsState((prevState) => {
+      return { ...prevState, loading: true };
+    });
     getGifs({ keyword }).then((gifs) => {
-      setGifs(gifs);
-      setLoading(false);
+      setGifsState({ loading: false, gifs: gifs });
     });
   }, [keyword]);
 
-  if (loading) {
+  if (gifsState.loading) {
     return (
       <div>
         <div className="fulfilling-square-spinner">
-          <div className="spinner-inner"></div>
+          <div className="spinner-inner">{console.log("render de loader")}</div>
         </div>
       </div>
     );
@@ -29,7 +31,7 @@ export default function ListOfGifs({ params }) {
 
   return (
     <div>
-      {gifs.map(({ title, url, import_datetime }) => (
+      {gifsState.gifs.map(({ title, url, import_datetime }) => (
         <Gif
           key={url}
           title={title}
