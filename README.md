@@ -4,7 +4,7 @@
 
 ### Getting involved with React
 
-### Continuing learning about fetch
+### Continuing learning about fetch and APIs
 
 ### Learn about JSX
 
