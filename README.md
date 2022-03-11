@@ -1,6 +1,6 @@
 # GIF search app
 
-## My main learning objetives:
+## Objetives of learning on this project :
 
 ### Getting involved with React
 
