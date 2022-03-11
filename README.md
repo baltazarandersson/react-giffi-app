@@ -4,10 +4,15 @@
 
 ### Getting involved with React
 
-### Continuing learning about fetch and APIs
+### Continuing learning about fetch and web APIs
 
-### Learn about JSX
+### Getting intro JSX
 
-## Demo image of the App running :
+### Getting intro Routers
 
-![img](https://i.imgur.com/ge5hvCU.png)
+## Demo video of the App running :
+
+
+
+https://user-images.githubusercontent.com/21319545/157921296-435ea913-f28f-419c-956b-18978aba8aa2.mp4
+
