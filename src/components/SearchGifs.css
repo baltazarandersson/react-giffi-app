@@ -36,5 +36,6 @@ input,
   justify-content: center;
 }
 input {
+  font-family: inherit;
   width: 50%;
 }
