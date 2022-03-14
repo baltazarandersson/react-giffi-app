@@ -1,0 +1,28 @@
+.gif-detail {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  justify-content: center;
+}
+.gif-detail img {
+  box-shadow: 0.5rem 0.5rem 0rem black;
+  width: 30%;
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+.gif-detail div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  width: 30%;
+  box-sizing: border-box;
+  border-radius: 0rem 1rem 1rem 0rem;
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  box-shadow: 0.5rem 0.5rem 0rem black;
+  color: black;
+}
+.gif-detail a {
+  color: black;
+}

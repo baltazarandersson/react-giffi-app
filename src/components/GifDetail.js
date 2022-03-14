@@ -14,7 +14,11 @@ export default function GifDetail({ params }) {
   return (
     <div className="gif-detail">
       <img src={url} alt="gif" />
-      <div></div>
+      <div>
+        <h1>{title}</h1>
+        <p>{date}</p>
+        <a href={bitly_url}>Link Directo</a>
+      </div>
     </div>
   );
 }
