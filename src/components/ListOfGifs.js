@@ -3,6 +3,7 @@ import Gif from "./Gif";
 import { useEffect, useState } from "react";
 import getGifs from "../services/getGifs";
 import "./Loading.css";
+import "./ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
   // const [loading, setLoading] = useState(false);
@@ -30,14 +31,9 @@ export default function ListOfGifs({ params }) {
   }
 
   return (
-    <div>
-      {gifsState.gifs.map(({ title, url, import_datetime }) => (
-        <Gif
-          key={url}
-          title={title}
-          url={url}
-          import_datetime={import_datetime}
-        />
+    <div className="gifs-container">
+      {gifsState.gifs.map(({ title, import_datetime, url, id }) => (
+        <Gif key={id} title={title} url={url} date={import_datetime} id={id} />
       ))}
     </div>
   );
