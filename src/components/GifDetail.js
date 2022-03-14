@@ -11,5 +11,10 @@ export default function GifDetail({ params }) {
     getGifDetail(id).then(setGifData);
   }, []);
 
-  return <div className="gif-detail">div</div>;
+  return (
+    <div className="gif-detail">
+      <img src={url} alt="gif" />
+      <div></div>
+    </div>
+  );
 }
