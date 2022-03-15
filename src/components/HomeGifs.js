@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import "./HomeGifs.css";
 
 export default function HomeGifs() {
-  const { gifsState } = useGifs({ keyword: "coding" });
+  const { gifsState } = useGifs();
 
   if (gifsState.loading) return <Loading />;
 
