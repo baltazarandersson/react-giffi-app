@@ -14,7 +14,8 @@
   box-shadow: 0.5rem 0.5rem 0rem black;
 }
 input,
-.link-button {
+.link-button,
+form {
   font-weight: 700;
   box-sizing: border-box;
   color: black;
@@ -38,5 +39,8 @@ input,
 input {
   outline: none;
   font-family: inherit;
+  width: 100%;
+}
+form {
   width: 50%;
 }

@@ -7,7 +7,6 @@ export default async function getGifDetail(id) {
   const { data } = responseData;
   const { images, title, import_datetime: date, bitly_url } = data;
   const { url } = images.original;
-  const { width: gif_width } = images.original;
-  console.log(gif_width);
-  return { title, date, bitly_url, url, width: gif_width };
+
+  return { title, date, bitly_url, url };
 }
