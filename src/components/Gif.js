@@ -8,8 +8,10 @@ export default function Gif({ title, date, url, id }) {
       <Link to={`/gif/id/${id}`}>
         <img src={url} key={url} alt="gif" />
       </Link>
-      <h1>{title}</h1>
-      <p>{date}</p>
+      <div>
+        <h1>{title}</h1>
+        <p>{date}</p>
+      </div>
     </div>
   );
 }

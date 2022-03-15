@@ -12,7 +12,13 @@
   cursor: pointer;
   width: 100%;
 }
-.Gif h1,
-p {
-  margin: 1rem 1rem;
+.Gif div h1 {
+  margin: 0rem;
+  margin-bottom: 1rem;
+}
+.Gif div {
+  box-sizing: border-box;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
 }
