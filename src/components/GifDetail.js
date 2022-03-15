@@ -1,15 +1,23 @@
 import { useState, useEffect } from "react";
 import getGifDetail from "../services/getGifDetail";
 import "./GifDetail.css";
+import Loading from "./Loading";
 
 export default function GifDetail({ params }) {
   const { id } = params;
   const [gifData, setGifData] = useState({});
+  const [loading, setLoading] = useState(false);
   const { title, date, bitly_url, url } = gifData;
 
   useEffect(() => {
-    getGifDetail(id).then(setGifData);
+    setLoading(true);
+    getGifDetail(id).then((gifDetail) => {
+      setGifData(gifDetail);
+      setLoading(false);
+    });
   }, []);
+
+  if (loading) return <Loading />;
 
   return (
     <div className="gif-detail">

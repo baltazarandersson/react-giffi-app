@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import getGifs from "../services/getGifs";
 import "./Loading.css";
 import "./ListOfGifs.css";
+import Loading from "./Loading";
 
 export default function ListOfGifs({ params }) {
   // const [loading, setLoading] = useState(false);
@@ -20,15 +21,7 @@ export default function ListOfGifs({ params }) {
     });
   }, [keyword]);
 
-  if (gifsState.loading) {
-    return (
-      <div>
-        <div className="fulfilling-square-spinner">
-          <div className="spinner-inner">{console.log("render de loader")}</div>
-        </div>
-      </div>
-    );
-  }
+  if (gifsState.loading) return <Loading />;
 
   return (
     <div className="gifs-container">
