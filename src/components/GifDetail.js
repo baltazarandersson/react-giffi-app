@@ -5,7 +5,7 @@ import "./GifDetail.css";
 export default function GifDetail({ params }) {
   const { id } = params;
   const [gifData, setGifData] = useState({});
-  const { title, date, bitly_url, url } = gifData;
+  const { title, date, bitly_url, url, gif_width } = gifData;
 
   useEffect(() => {
     getGifDetail(id).then(setGifData);
@@ -13,7 +13,7 @@ export default function GifDetail({ params }) {
 
   return (
     <div className="gif-detail">
-      <img src={url} alt="gif" />
+      <img src={url} alt="gif" style={{ width: gif_width }} />
       <div>
         <h1>{title}</h1>
         <p>{date}</p>

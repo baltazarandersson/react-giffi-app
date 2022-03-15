@@ -36,6 +36,7 @@ input,
   justify-content: center;
 }
 input {
+  outline: none;
   font-family: inherit;
   width: 50%;
 }

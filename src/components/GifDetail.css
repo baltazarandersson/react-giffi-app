@@ -5,10 +5,10 @@
   box-sizing: border-box;
   padding: 2rem;
   justify-content: center;
+  height: auto;
 }
 .gif-detail img {
   box-shadow: 0.5rem 0.5rem 0rem black;
-  width: 30%;
   border-radius: 1rem 0rem 0rem 1rem;
 }
 .gif-detail div {
@@ -22,6 +22,10 @@
   background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   box-shadow: 0.5rem 0.5rem 0rem black;
   color: black;
+}
+.gif-detail h1,
+p {
+  margin: 0px;
 }
 .gif-detail a {
   color: black;
