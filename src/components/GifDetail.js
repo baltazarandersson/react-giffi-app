@@ -25,7 +25,7 @@ export default function GifDetail({ params }) {
       <div>
         <h1>{title}</h1>
         <p>{date}</p>
-        <a href={bitly_url}>Link Directo</a>
+        <a href={bitly_url}>source</a>
       </div>
     </div>
   );
