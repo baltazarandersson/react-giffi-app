@@ -21,7 +21,7 @@ export default function SearchGifs() {
         />
       </form>
       <Link className="link-button" to={`/gif/${query}`}>
-        {"Magic Button"}
+        {"Search"}
       </Link>
     </div>
   );
