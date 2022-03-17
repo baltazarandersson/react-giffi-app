@@ -44,9 +44,7 @@ input:focus::placeholder {
 form {
   height: 3rem;
   width: 400px;
-  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: var(--black-shadow);
   display: flex;
   background: var(--white-gradient-background);
 }

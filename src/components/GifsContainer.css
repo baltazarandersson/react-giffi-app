@@ -7,20 +7,27 @@
   gap: 2rem;
 }
 .gifs-container {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  column-count: 3;
   gap: 2rem;
 }
 .main > div:nth-child(2) {
   box-sizing: border-box;
   overflow: hidden;
-  min-width: 300px;
-  border-radius: 1rem;
+  min-width: 30%;
   background: var(--white-gradient-background);
   color: black;
-  box-shadow: var(--black-shadow);
   font-size: 1rem;
+}
+@media screen and (max-width: 60rem) {
+  .gifs-container {
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 45rem) {
+  .main {
+    flex-direction: column-reverse;
+  }
+  .Gif p {
+    font-size: 0.8rem;
+  }
 }

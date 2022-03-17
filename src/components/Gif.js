@@ -6,12 +6,9 @@ export default function Gif({ title, date, url, id }) {
   return (
     <div className="Gif">
       <Link to={`/gif/id/${id}`}>
+        <p>{title}</p>
         <img src={url} key={url} alt="gif" />
       </Link>
-      <div>
-        <p>{title}</p>
-        <p>{date}</p>
-      </div>
     </div>
   );
 }
