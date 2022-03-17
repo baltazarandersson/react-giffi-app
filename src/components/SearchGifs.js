@@ -19,10 +19,10 @@ export default function SearchGifs() {
           placeholder="Search any GIF here!"
           onChange={(e) => setQuery(e.target.value)}
         />
+        <Link className="link-button" to={`/gif/${query}`}>
+          {"Search"}
+        </Link>
       </form>
-      <Link className="link-button" to={`/gif/${query}`}>
-        {"Search"}
-      </Link>
     </div>
   );
 }

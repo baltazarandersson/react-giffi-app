@@ -9,7 +9,7 @@ export default function Gif({ title, date, url, id }) {
         <img src={url} key={url} alt="gif" />
       </Link>
       <div>
-        <h1>{title}</h1>
+        <p>{title}</p>
         <p>{date}</p>
       </div>
     </div>

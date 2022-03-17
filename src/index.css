@@ -3,6 +3,8 @@ body {
   font-family: "Product Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --black-shadow: 0.5rem 0.5rem 0rem black;
+  --white-gradient-background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
 
 code {

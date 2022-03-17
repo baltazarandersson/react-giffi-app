@@ -1,20 +1,23 @@
 .Gif {
   box-sizing: border-box;
   overflow: hidden;
-  width: 300px;
+  width: 200px;
   border-radius: 1rem;
-  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  background: var(--white-gradient-background);
   color: black;
-  box-shadow: 0.5rem 0.5rem 0rem black;
+  box-shadow: var(--black-shadow);
   font-size: 1rem;
 }
 .Gif img {
   cursor: pointer;
   width: 100%;
+  max-height: 200px;
 }
-.Gif div h1 {
+.Gif div p:nth-child(1) {
   margin: 0rem;
   margin-bottom: 1rem;
+  font-family: "Product Sans Medium", sans-serif;
+  font-weight: bold;
 }
 .Gif div {
   box-sizing: border-box;

@@ -1,7 +1,7 @@
 import React from "react";
-import Gif from "./Gif";
 import Loading from "./Loading";
 import useGifs from "../hooks/useGifs";
+import GifsContainer from "./GifsContainer";
 
 export default function ListOfGifs({ params }) {
   const { keyword } = params;
@@ -10,11 +10,5 @@ export default function ListOfGifs({ params }) {
 
   if (gifsState.loading) return <Loading />;
 
-  return (
-    <div className="gifs-container">
-      {gifsState.gifs.map(({ title, import_datetime, url, id }) => (
-        <Gif key={id} title={title} url={url} date={import_datetime} id={id} />
-      ))}
-    </div>
-  );
+  return <GifsContainer gifsState={gifsState} />;
 }
