@@ -1,16 +1,18 @@
 # GIF search app
 
-## Objetives of learning on this project :
+### App created with the React.js course of [midudev](https://youtube.com/playlist?list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC)
 
-### Getting involved with React
+## Learning objetives :
 
-### Continuing learning about fetch and web APIs
+- Getting involved with React.js
 
-### Getting intro JSX
+- Continuing learning about fetch and web APIs
 
-### Getting intro Routers
+- Getting intro JSX
 
-## Demo video of the App running :
+- Getting intro wouter.js
+
+## The App running :
 
 
 
