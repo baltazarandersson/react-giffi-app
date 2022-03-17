@@ -10,11 +10,7 @@
 
 - Getting intro JSX
 
-- Getting intro wouter.js
-
-## The App running :
+- Getting intro Routers
 
 
-
-https://user-images.githubusercontent.com/21319545/157921296-435ea913-f28f-419c-956b-18978aba8aa2.mp4
 
