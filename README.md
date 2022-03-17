@@ -6,7 +6,7 @@
 
 - Getting involved with React.js
 
-- Continuing learning about fetch and web APIs
+- Continue learning about fetch and web APIs
 
 - Getting intro JSX
 
