@@ -10,7 +10,10 @@ export default function Header() {
         </Link>
       </div>
       <SearchGifs></SearchGifs>
-      <div>Login | Logout</div>
+      <div>
+        <div>Login</div>
+        <div>Register</div>
+      </div>
     </div>
   );
 }

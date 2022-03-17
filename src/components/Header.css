@@ -32,22 +32,27 @@
   background: -webkit-linear-gradient(#ffffff, #d7e1ec);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: end;
+  gap: 2rem;
 }
 @media screen and (max-width: 45rem) {
   .header {
     padding-bottom: 0;
   }
-  .header div:nth-child(3) {
+  .header > div:nth-child(1) {
     display: none;
-    width: auto;
-    position: absolute;
-    bottom: 0;
-    left: 2rem;
   }
-  .header > div:nth-child(1),
-  .header > div:nth-child(2) {
-    width: 50%;
-
-    align-items: center;
+  .header > div:nth-child(2),
+  .header > div:nth-child(3) {
+    width: auto;
+  }
+  .header > div:nth-child(3) {
+    gap: 0rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header {
+    font-size: 1rem;
   }
 }
