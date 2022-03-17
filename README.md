@@ -4,13 +4,13 @@
 
 ## Learning objetives :
 
-- Getting involved with React
+- Getting involved with React.js
 
 - Continuing learning about fetch and web APIs
 
 - Getting intro JSX
 
-- Getting intro Routers
+- Getting intro wouter.js
 
 ## The App running :
 
