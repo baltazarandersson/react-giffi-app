@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.gifs-container {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.main > div:nth-child(2) {
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 300px;
+  border-radius: 1rem;
+  background: var(--white-gradient-background);
+  color: black;
+  box-shadow: var(--black-shadow);
+  font-size: 1rem;
+}
