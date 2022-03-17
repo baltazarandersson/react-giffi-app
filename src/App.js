@@ -1,14 +1,21 @@
-import "./App.css";
 import React from "react";
-import SearchGifs from "./components/SearchGifs";
-import Body from "./components/Body";
+import { Route } from "wouter";
+import "./App.css";
+import Header from "./components/Header";
+import GifDetail from "./components/GifDetail";
+import HomePage from "./pages/Home/HomePage";
+import SearchResult from "./pages/SearchResult/SearchResult";
 
 function App() {
   return (
     <div className="App">
       <section className="App-content">
-        <SearchGifs />
-        <Body />
+        <Header />
+        <div className="body">
+          <Route path="/" component={HomePage} />
+          <Route path="/gif/:keyword" component={SearchResult} />
+          <Route path="/gif/id/:id" component={GifDetail} />
+        </div>
       </section>
     </div>
   );

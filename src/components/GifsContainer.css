@@ -18,6 +18,11 @@
   color: black;
   font-size: 1rem;
 }
+.main > div:nth-child(2) h2 {
+  margin: 0px;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
 @media screen and (max-width: 60rem) {
   .gifs-container {
     column-count: 2;
@@ -25,7 +30,7 @@
 }
 @media screen and (max-width: 45rem) {
   .main {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .Gif p {
     font-size: 0.8rem;

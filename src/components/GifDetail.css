@@ -24,3 +24,12 @@ p {
 .gif-detail a {
   color: black;
 }
+@media screen and (max-width: 45rem) {
+  .gif-detail {
+    flex-direction: column;
+  }
+  .gif-detail div,
+  img {
+    width: 100%;
+  }
+}
