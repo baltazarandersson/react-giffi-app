@@ -4,7 +4,7 @@
   flex-direction: row;
   padding: 2rem;
   box-sizing: border-box;
-  height: 7rem;
+  max-height: 7rem;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,8 @@
 .header > a {
   display: flex;
   width: 33%;
+  height: 3rem;
+  align-items: center;
 }
 .header div:nth-child(1) {
   justify-content: flex-start;
@@ -32,6 +34,9 @@
   -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 45rem) {
+  .header {
+    padding-bottom: 0;
+  }
   .header div:nth-child(3) {
     display: none;
     width: auto;
@@ -39,10 +44,10 @@
     bottom: 0;
     left: 2rem;
   }
-  .header > div:nth-child(1) {
-    width: 40%;
-  }
+  .header > div:nth-child(1),
   .header > div:nth-child(2) {
-    width: 60%;
+    width: 50%;
+
+    align-items: center;
   }
 }
