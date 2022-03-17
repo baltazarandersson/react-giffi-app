@@ -9,10 +9,10 @@
 input,
 .link-button,
 form {
-  font-weight: 700;
+  font-weight: 600;
   box-sizing: border-box;
   color: black;
-  font-size: 1rem;
+  font-size: 1.2rem;
   height: 2rem;
   margin: 0px;
   padding: 0px;
@@ -44,4 +44,12 @@ form {
   overflow: hidden;
   display: flex;
   background: var(--white-gradient-background);
+}
+@media screen and (max-width: 45rem) {
+  .link-button {
+    display: none;
+  }
+  input {
+    width: 100%;
+  }
 }

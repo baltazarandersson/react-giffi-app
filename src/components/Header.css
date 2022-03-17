@@ -10,7 +10,7 @@
   align-items: center;
 }
 .logo {
-  font-family: "Product Sans Black", sans-serif;
+  font-weight: 600;
   font-size: 3rem;
   background: -webkit-linear-gradient(#ffffff, #d7e1ec);
   background-clip: text;
@@ -39,8 +39,10 @@
     bottom: 0;
     left: 2rem;
   }
-  .header > div:nth-child(1),
+  .header > div:nth-child(1) {
+    width: 40%;
+  }
   .header > div:nth-child(2) {
-    width: 50%;
+    width: 60%;
   }
 }

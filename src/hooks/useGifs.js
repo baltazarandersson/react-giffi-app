@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import getGifs from "../services/getGifs";
 import "../components/Loading.css";
-import "../components/ListOfGifs.css";
 
 export default function useGifs({ keyword }) {
   const [gifsState, setGifsState] = useState({ loading: false, gifs: [] });
