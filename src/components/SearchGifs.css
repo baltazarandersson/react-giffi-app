@@ -36,12 +36,11 @@ input {
   background: none;
   padding-left: 0rem 1rem;
   box-sizing: border-box;
+  text-align: start;
+  padding-left: 1rem;
 }
 input:focus::placeholder {
   color: transparent;
-}
-input:focus {
-  text-align: start;
 }
 form {
   height: 3rem;

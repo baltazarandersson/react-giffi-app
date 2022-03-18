@@ -10,13 +10,20 @@ export default function TrendingLabels() {
     getTrendingLabels().then(setTrends);
   }, []);
 
-  console.log(trends);
+  function getRandomColor() {
+    return Math.floor(Math.random() * 16777215).toString(16);
+  }
 
   return (
     <div>
       {trends.map((trend) => {
         return (
-          <Link className="trending-tag" to={`/gif/${trend}`} key={`${trend}`}>
+          <Link
+            style={{ background: `#${getRandomColor()}` }}
+            className="trending-tag"
+            to={`/gif/${trend}`}
+            key={`${trend}`}
+          >
             {trend}
           </Link>
         );
