@@ -37,7 +37,8 @@
 }
 @media screen and (max-width: 45rem) {
   .header {
-    padding-bottom: 0;
+    padding: 1rem 2rem;
+    gap: 1rem;
   }
   .header > div:nth-child(1) {
     display: none;

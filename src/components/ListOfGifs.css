@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.trending-box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 30%;
+  background: var(--white-gradient-background);
+  color: black;
+  font-size: 1rem;
+}
+.trending-box > h2 {
+  padding: 4rem 4rem;
+  text-align: center;
+  margin: 0px;
+  padding: 1rem 4rem;
+  border-bottom: 1px solid gray;
+}
+.trending-box > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 1rem 4rem;
+  text-align: start;
+}
+
+@media screen and (max-width: 45rem) {
+  .trending-box {
+    max-width: 100%;
+  }
+  .main {
+    flex-direction: column;
+  }
+}

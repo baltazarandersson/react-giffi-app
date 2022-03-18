@@ -1,37 +1,14 @@
-.main {
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  box-sizing: border-box;
-  justify-content: space-between;
-  gap: 2rem;
-}
 .gifs-container {
   column-count: 3;
   gap: 2rem;
 }
-.main > div:nth-child(2) {
-  box-sizing: border-box;
-  overflow: hidden;
-  min-width: 30%;
-  background: var(--white-gradient-background);
-  color: black;
-  font-size: 1rem;
-}
-.main > div:nth-child(2) h2 {
-  margin: 0px;
-  padding: 1rem;
-  border-bottom: 1px solid gray;
-}
+
 @media screen and (max-width: 60rem) {
   .gifs-container {
     column-count: 2;
   }
 }
 @media screen and (max-width: 45rem) {
-  .main {
-    flex-direction: column;
-  }
   .Gif p {
     font-size: 0.8rem;
   }

@@ -2,9 +2,9 @@ import React from "react";
 import { Route } from "wouter";
 import "./App.css";
 import Header from "./components/Header";
-import GifDetail from "./components/GifDetail";
 import HomePage from "./pages/Home/HomePage";
 import SearchResult from "./pages/SearchResult/SearchResult";
+import Detials from "./pages/Details/Details";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <div className="body">
           <Route path="/" component={HomePage} />
           <Route path="/gif/:keyword" component={SearchResult} />
-          <Route path="/gif/id/:id" component={GifDetail} />
+          <Route path="/gif/id/:id" component={Detials} />
         </div>
       </section>
     </div>

@@ -1,0 +1,14 @@
+.trending-tag {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  padding: 0.4rem;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+.trending-tag:hover {
+  text-decoration: underline;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}

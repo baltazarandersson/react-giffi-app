@@ -21,7 +21,7 @@ form {
   text-align: center;
 }
 .link-button {
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,12 +31,17 @@ form {
 input {
   outline: none;
   font-family: inherit;
-  width: 60%;
+  width: 70%;
   height: 100%;
   background: none;
+  padding-left: 0rem 1rem;
+  box-sizing: border-box;
 }
 input:focus::placeholder {
   color: transparent;
+}
+input:focus {
+  text-align: start;
 }
 form {
   height: 3rem;

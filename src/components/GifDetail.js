@@ -15,7 +15,7 @@ export default function GifDetail({ params }) {
       setGifData(gifDetail);
       setLoading(false);
     });
-  }, []);
+  }, [id]);
 
   if (loading) return <Loading />;
 
