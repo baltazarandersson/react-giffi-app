@@ -1,15 +1,19 @@
 .Gif {
   box-sizing: border-box;
-  overflow: hidden;
-  margin-bottom: 1rem;
   color: black;
   font-size: 1rem;
   position: relative;
+  height: fit-content;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.Gif > a {
+  display: flex;
 }
 .Gif img {
   cursor: pointer;
   width: 100%;
-  min-height: 150px;
+  min-height: 100px;
 }
 .Gif p {
   font-weight: 500;
@@ -17,11 +21,24 @@
   color: white;
   text-align: start;
   position: absolute;
-  padding: 4px;
-  bottom: 4px;
+  padding: 0px 4px;
+  bottom: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.Gif:hover p {
+  opacity: 1;
 }
 @media screen and (max-width: 45rem) {
   .Gif img {
     min-height: 75px;
+  }
+  .Gif p {
+    visibility: visible;
+    opacity: 1;
   }
 }

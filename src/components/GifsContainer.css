@@ -1,16 +1,15 @@
 .gifs-container {
-  column-count: 3;
-  gap: 2rem;
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  grid-template-rows: masonry;
 }
 
-@media screen and (max-width: 60rem) {
-  .gifs-container {
-    column-count: 2;
-  }
-}
 @media screen and (max-width: 45rem) {
+  .gifs-container {
+    grid-template-columns: 1fr 1fr;
+  }
   .Gif p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }

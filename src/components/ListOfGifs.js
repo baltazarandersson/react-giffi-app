@@ -15,7 +15,7 @@ export default function ListOfGifs({ params }) {
   return (
     <div className="list-of-gifs">
       <GifsContainer gifsState={gifsState} />
-      <button onClick={handleNextPage}>Next page</button>
+      <button onClick={handleNextPage}>Load More GIFs</button>
     </div>
   );
 }
