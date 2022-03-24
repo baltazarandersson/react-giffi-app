@@ -1,5 +1,11 @@
-import ListOfGifs from "../../components/ListOfGifs";
+import ListOfGifs from "components/ListOfGifs";
+import TrendingBox from "components/TrendingBox";
 
 export default function SearchResult({ params }) {
-  return <ListOfGifs params={params}></ListOfGifs>;
+  return (
+    <div className="main">
+      <ListOfGifs params={params}></ListOfGifs>
+      <TrendingBox></TrendingBox>
+    </div>
+  );
 }

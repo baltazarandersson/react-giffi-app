@@ -1,24 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import useGifs from "../hooks/useGifs";
 import GifsContainer from "./GifsContainer";
-import TrendingLabels from "./TrendingLabels";
 import "./ListOfGifs.css";
 
 export default function ListOfGifs({ params }) {
   const { keyword } = params;
+  const { gifsState, setPage } = useGifs({ keyword });
 
-  const { gifsState } = useGifs({ keyword });
+  const handleNextPage = () => setPage((prevPage) => prevPage + 1);
 
   if (gifsState.loading) return <Loading />;
 
   return (
-    <div className="main">
+    <div className="list-of-gifs">
       <GifsContainer gifsState={gifsState} />
-      <div className="trending-box">
-        <h2>Trending Categories</h2>
-        <TrendingLabels></TrendingLabels>
-      </div>
+      <button onClick={handleNextPage}>Next page</button>
     </div>
   );
 }

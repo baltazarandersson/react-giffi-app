@@ -11,7 +11,9 @@ export default function TrendingLabels() {
   }, []);
 
   function getRandomColor() {
-    return Math.floor(Math.random() * 16777215).toString(16);
+    const randomNumber = () => Math.floor(Math.random() * (240 - 60 + 1) + 60);
+    const color = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+    return color;
   }
 
   return (
@@ -19,7 +21,7 @@ export default function TrendingLabels() {
       {trends.map((trend) => {
         return (
           <Link
-            style={{ background: `#${getRandomColor()}` }}
+            style={{ background: `${getRandomColor()}` }}
             className="trending-tag"
             to={`/gif/${trend}`}
             key={`${trend}`}

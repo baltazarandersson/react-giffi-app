@@ -5,13 +5,18 @@
   box-sizing: border-box;
   justify-content: space-between;
   gap: 2rem;
+  width: 100%;
+}
+
+#lazytrend {
+  max-width: 30%;
 }
 .trending-box {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
-  max-width: 30%;
+  max-width: 100%;
   background: var(--white-gradient-background);
   color: black;
   font-size: 1rem;
@@ -30,12 +35,29 @@
   justify-content: space-between;
   gap: 1rem;
   box-sizing: border-box;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   text-align: start;
 }
-
+.list-of-gifs {
+  display: flex;
+  flex-direction: column;
+}
+.list-of-gifs > button {
+  font-family: inherit;
+  font-weight: 600;
+  box-sizing: border-box;
+  color: black;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding: 0px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+}
 @media screen and (max-width: 45rem) {
-  .trending-box {
+  #lazytrend {
     max-width: 100%;
   }
   .main {
