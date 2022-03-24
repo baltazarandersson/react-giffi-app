@@ -16,19 +16,20 @@
   min-height: 100px;
 }
 .Gif p {
+  font-size: 0.8rem;
   font-weight: 500;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   text-align: start;
   position: absolute;
   padding: 0px 4px;
   bottom: 0px;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .Gif:hover p {
   opacity: 1;
@@ -40,5 +41,8 @@
   .Gif p {
     visibility: visible;
     opacity: 1;
+  }
+  .Gif p {
+    font-size: 0.6rem;
   }
 }
