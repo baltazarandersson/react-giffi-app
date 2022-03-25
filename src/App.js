@@ -10,7 +10,7 @@ import StaticContext from "context/StaticContext";
 function App() {
   return (
     <StaticContext.Provider>
-      <div className="App">
+      <div className={`App `}>
         <section className="App-content">
           <Header />
           <Route path="/" component={HomePage} />

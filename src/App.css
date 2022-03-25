@@ -18,3 +18,32 @@
   align-items: center;
   flex-direction: column;
 }
+
+.light-theme h2,
+.light-theme .logo,
+.light-theme .header div:nth-child(3) > div {
+  background: hsl(210, 7.9%, 14.9%) !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.light-theme .App-content {
+  background: #f8f8f8 !important;
+}
+.light-theme .search-bar form {
+  background: hsl(210, 7.9%, 14.9%) !important;
+}
+.light-theme .gif-detail div {
+  background: hsl(210, 7.9%, 14.9%) !important;
+}
+.light-theme .gif-detail h1,
+.light-theme .gif-detail a,
+.light-theme .gif-detail p {
+  color: #f8f8f8 !important;
+}
+.light-theme .link-button,
+.light-theme .search-bar form input {
+  color: #f8f8f8 !important;
+}
+.light-theme .search-bar form input::placeholder {
+  color: lightgray;
+}

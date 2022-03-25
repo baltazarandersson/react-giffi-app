@@ -11,6 +11,10 @@ export default function Header() {
       </div>
       <SearchGifs></SearchGifs>
       <div>
+        <label class="switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
         <div>Login</div>
         <div>Register</div>
       </div>
