@@ -11,7 +11,7 @@ export default function TrendingLabels() {
   }, []);
 
   function getRandomColor() {
-    const randomNumber = () => Math.floor(Math.random() * (240 - 60 + 1) + 60);
+    const randomNumber = () => Math.floor(Math.random() * (240 - 70 + 1) + 70);
     const color = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
     return color;
   }

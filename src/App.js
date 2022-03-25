@@ -5,6 +5,7 @@ import Header from "components/Header";
 import HomePage from "pages/Home/HomePage";
 import SearchResult from "pages/SearchResult/SearchResult";
 import Detials from "pages/Details/Details";
+import StaticContext from "context/StaticContext";
 
 function App() {
   return (
