@@ -9,14 +9,16 @@ import StaticContext from "context/StaticContext";
 
 function App() {
   return (
-    <div className="App">
-      <section className="App-content">
-        <Header />
-        <Route path="/" component={HomePage} />
-        <Route path="/gif/:keyword" component={SearchResult} />
-        <Route path="/gif/id/:id" component={Detials} />
-      </section>
-    </div>
+    <StaticContext.Provider>
+      <div className="App">
+        <section className="App-content">
+          <Header />
+          <Route path="/" component={HomePage} />
+          <Route path="/gif/:keyword" component={SearchResult} />
+          <Route path="/gif/id/:id" component={Detials} />
+        </section>
+      </div>
+    </StaticContext.Provider>
   );
 }
 
