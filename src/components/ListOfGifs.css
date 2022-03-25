@@ -18,31 +18,40 @@
   box-sizing: border-box;
   overflow: hidden;
   max-width: 100%;
-  background: var(--white-gradient-background);
-  color: black;
   font-size: 1rem;
+  gap: 2rem;
 }
 .trending-box > h2 {
-  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: end;
   margin: 0px;
-  padding: 1rem 4rem;
-  border-bottom: 1px solid gray;
+  background: -webkit-linear-gradient(#ffffff, #d7e1ec);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .trending-box > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 1rem;
   box-sizing: border-box;
-  padding: 1rem 3rem;
-  text-align: start;
 }
 .list-of-gifs {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  gap: 2rem;
+}
+.list-of-gifs > h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: start;
+  margin: 0px;
+  background: -webkit-linear-gradient(#ffffff, #d7e1ec);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 45rem) {
   #lazytrend {
@@ -50,5 +59,12 @@
   }
   .main {
     flex-direction: column;
+    padding: 1rem;
+  }
+  .list-of-gifs > h2 {
+    font-size: 1.2rem;
+  }
+  .list-of-gifs {
+    gap: 0.2rem;
   }
 }

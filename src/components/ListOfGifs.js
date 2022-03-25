@@ -28,6 +28,7 @@ export default function ListOfGifs({ params }) {
 
   return (
     <div className="list-of-gifs">
+      <h2>Last search</h2>
       <GifsContainer gifsState={gifsState} />
       <div className="visor" ref={externalRef}></div>
     </div>
