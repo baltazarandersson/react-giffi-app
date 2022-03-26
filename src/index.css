@@ -3,6 +3,7 @@ body {
   font-family: "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --white-dimmed: #f8f8f8;
   --white-gradient-background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   --dark-gray: hsl(210, 7.9%, 14.9%);
   --dark-main: #121113;

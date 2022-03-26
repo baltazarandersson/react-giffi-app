@@ -10,7 +10,7 @@
 }
 
 .slider {
-  background-color: #aaa;
+  background-color: var(--white-dimmed);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -21,7 +21,7 @@
 }
 
 .slider:before {
-  background-color: #fff;
+  background: var(--dark-main);
   bottom: 4px;
   content: "";
   height: 26px;
@@ -36,6 +36,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
+  background: var(--white-dimmed);
   transform: translateX(26px);
 }
 

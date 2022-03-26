@@ -1,6 +1,6 @@
 import TrendingLabels from "./TrendingLabels";
 import useNearScreen from "hooks/useNearScreen";
-
+import "./TrendingBox.css";
 function TrendingBox() {
   return (
     <div className="trending-box">
