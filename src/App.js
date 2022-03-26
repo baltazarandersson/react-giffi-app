@@ -6,12 +6,13 @@ import HomePage from "pages/Home/HomePage";
 import SearchResult from "pages/SearchResult/SearchResult";
 import Detials from "pages/Details/Details";
 import { useTheme } from "context/ThemeContext";
+import classNames from "classnames";
 
 function App() {
   const { theme } = useTheme();
 
   return (
-    <div className={`App dark-${theme}`}>
+    <div className={classNames("App", { "light-mode": !theme })}>
       <section className="App-content">
         <Header />
         <Route path="/" component={HomePage} />

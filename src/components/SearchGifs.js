@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./SearchGifs.css";
 import { Link, useLocation } from "wouter";
 

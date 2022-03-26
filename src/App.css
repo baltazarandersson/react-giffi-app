@@ -20,43 +20,43 @@
   flex-direction: column;
 }
 
-.dark-false h2,
-.dark-false .logo,
-.dark-false .login,
-.dark-false .register {
+.light-mode h2,
+.light-mode .logo,
+.light-mode .login,
+.light-mode .register {
   background: var(--dark-gray) !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
-.dark-false .App-content {
+.light-mode .App-content {
   background: #f8f8f8 !important;
 }
-.dark-false .search-bar form {
+.light-mode .search-bar form {
   background: var(--dark-gray) !important;
 }
-.dark-false .gif-detail div {
+.light-mode .gif-detail div {
   background: var(--dark-gray) !important;
 }
-.dark-false .gif-detail h1,
-.dark-false .gif-detail a,
-.dark-false .gif-detail p {
+.light-mode .gif-detail h1,
+.light-mode .gif-detail a,
+.light-mode .gif-detail p {
   color: #f8f8f8 !important;
 }
-.dark-false .link-button,
-.dark-false .search-bar form input {
+.light-mode .link-button,
+.light-mode .search-bar form input {
   color: #f8f8f8 !important;
 }
-.dark-false .search-bar form input::placeholder {
+.light-mode .search-bar form input::placeholder {
   color: lightgray;
 }
-.dark-false .loader .fulfilling-square-spinner {
+.light-mode .loader .fulfilling-square-spinner {
   border: 4px solid var(--dark-gray);
 }
-.dark-false .drawer-menu {
+.light-mode .drawer-menu {
   background: #f8f8f8 !important;
 }
-.dark-false .menu-icon,
-.dark-false .drawer-icon {
+.light-mode .menu-icon,
+.light-mode .drawer-icon {
   color: var(--dark-gray) !important;
 }
 .App * {

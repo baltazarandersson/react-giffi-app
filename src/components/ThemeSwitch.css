@@ -29,6 +29,7 @@
   position: absolute;
   transition: 0.4s;
   width: 26px;
+  z-index: 1;
 }
 
 input:checked + .slider {
@@ -46,4 +47,24 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.switch-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  top: 8px;
+}
+.switch-moon {
+  left: 8px;
+  color: var(--white-dimmed);
+}
+
+.switch-sun {
+  left: 34px;
+  color: var(--dark-main);
+}
+
+.switch-icon-visible {
+  opacity: 1;
 }
