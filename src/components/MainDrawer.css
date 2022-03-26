@@ -1,0 +1,33 @@
+.drawer-menu {
+  background-color: var(--dark-main);
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  transition: all 0.5s ease;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu-icon,
+.drawer-icon {
+  height: 48px;
+  color: #d7e1ec;
+}
+.drawer-menu.true {
+  left: 0;
+}
+.drawer-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.mobile-auth {
+  gap: 1rem;
+}
