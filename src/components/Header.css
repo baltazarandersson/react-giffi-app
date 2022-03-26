@@ -31,12 +31,15 @@
 .header > div:nth-child(3) {
   font-weight: bold;
   justify-content: flex-end;
-  background: -webkit-linear-gradient(#ffffff, #d7e1ec);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-align: end;
   gap: 2rem;
   font-size: 1.2rem;
+}
+.login,
+.register {
+  background: -webkit-linear-gradient(#ffffff, #d7e1ec);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 45rem) {
   .header {

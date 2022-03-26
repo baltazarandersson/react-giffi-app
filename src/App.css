@@ -48,6 +48,9 @@
 .light-theme .search-bar form input::placeholder {
   color: lightgray;
 }
+.light-theme .loader .fulfilling-square-spinner {
+  border: 4px solid var(--dark-gray);
+}
 .App * {
   transition: all 0.3s ease !important;
 }
