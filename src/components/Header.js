@@ -1,7 +1,12 @@
 import SearchGifs from "./SearchGifs";
 import "./Header.css";
 import { Link } from "wouter";
+import { useThemeUpdate } from "context/ThemeContext";
+import "./Switch.css";
+
 export default function Header() {
+  const toggleTheme = useThemeUpdate();
+
   return (
     <div className="header">
       <div>
@@ -11,10 +16,10 @@ export default function Header() {
       </div>
       <SearchGifs></SearchGifs>
       <div>
-        {/* <label class="switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round"></div>
-        </label> */}
+        <label className="switch" htmlFor="checkbox">
+          <input type="checkbox" id="checkbox" onChange={toggleTheme} />
+          <div className="slider round"></div>
+        </label>
         <div>Login</div>
         <div>Register</div>
       </div>

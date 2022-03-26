@@ -1,24 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Route } from "wouter";
 import "App.css";
 import Header from "components/Header";
 import HomePage from "pages/Home/HomePage";
 import SearchResult from "pages/SearchResult/SearchResult";
 import Detials from "pages/Details/Details";
-import StaticContext from "context/StaticContext";
+import { useTheme } from "context/ThemeContext";
 
 function App() {
+  const theme = useTheme();
+
   return (
-    <StaticContext.Provider>
-      <div className={`App `}>
-        <section className="App-content">
-          <Header />
-          <Route path="/" component={HomePage} />
-          <Route path="/gif/:keyword" component={SearchResult} />
-          <Route path="/gif/id/:id" component={Detials} />
-        </section>
-      </div>
-    </StaticContext.Provider>
+    <div className={`App ${theme}`}>
+      <section className="App-content">
+        <Header />
+        <Route path="/" component={HomePage} />
+        <Route path="/gif/:keyword" component={SearchResult} />
+        <Route path="/gif/id/:id" component={Detials} />
+      </section>
+    </div>
   );
 }
 

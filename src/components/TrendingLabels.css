@@ -4,10 +4,5 @@
   color: black;
   text-decoration: none;
   padding: 0.4rem;
-  transition: all 0.3s ease;
-}
-.trending-tag:hover {
-  text-decoration: underline;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  font-weight: 600;
 }
