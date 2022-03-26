@@ -56,6 +56,9 @@
   #lazytrend {
     max-width: 100%;
   }
+  .main > #lazytrend {
+    display: none;
+  }
   .main {
     flex-direction: column;
     padding: 1rem;

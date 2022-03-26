@@ -1,7 +1,9 @@
 import SearchGifs from "./SearchGifs";
 import "./Header.css";
 import { Link } from "wouter";
-import Switch from "./Switch";
+import ThemeSwitch from "./ThemeSwitch";
+
+import MainDrawer from "./MainDrawer";
 
 export default function Header() {
   return (
@@ -11,11 +13,16 @@ export default function Header() {
           GIFFI
         </Link>
       </div>
+
       <SearchGifs></SearchGifs>
+
       <div>
-        <Switch></Switch>
-        <div className="login">Login</div>
-        <div className="register">Register</div>
+        <div className="desktop-auth">
+          <ThemeSwitch></ThemeSwitch>
+          <div className="login">Login</div>
+          <div className="register">Register</div>
+        </div>
+        <MainDrawer></MainDrawer>
       </div>
     </div>
   );
