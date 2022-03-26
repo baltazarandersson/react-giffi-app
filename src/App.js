@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Route } from "wouter";
 import "App.css";
 import Header from "components/Header";
@@ -8,10 +8,10 @@ import Detials from "pages/Details/Details";
 import { useTheme } from "context/ThemeContext";
 
 function App() {
-  const theme = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App dark-${theme}`}>
       <section className="App-content">
         <Header />
         <Route path="/" component={HomePage} />

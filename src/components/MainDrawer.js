@@ -1,10 +1,11 @@
-import { useState } from "react";
 import "./MainDrawer.css";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
 import ThemeSwitch from "components/ThemeSwitch";
 import TrendingBox from "components/TrendingBox";
+import { useDrawer } from "context/DrawerContext";
+
 export default function MainDrawer() {
-  const [showDrawer, updateShowDrawer] = useState(false);
+  const { drawerState, drawerStateUpdate } = useDrawer();
 
   return (
     <div className="drawer">
@@ -12,16 +13,16 @@ export default function MainDrawer() {
         className="menu-icon"
         size={48}
         onClick={() => {
-          updateShowDrawer(!showDrawer);
+          drawerStateUpdate(!drawerState);
         }}
       ></HiMenu>
-      <div className={`drawer-menu ${showDrawer}`}>
+      <div className={`drawer-menu ${drawerState}`}>
         <div className="drawer-header">
           <HiOutlineX
             className="drawer-icon"
             size={48}
             onClick={() => {
-              updateShowDrawer(!showDrawer);
+              drawerStateUpdate(!drawerState);
             }}
           ></HiOutlineX>
 

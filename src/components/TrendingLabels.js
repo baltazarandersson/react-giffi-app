@@ -1,3 +1,4 @@
+import { useDrawer } from "context/DrawerContext";
 import { useEffect, useState, useMemo } from "react";
 import { Link } from "wouter";
 import getTrendingLabels from "../services/getTrendingLabels";
@@ -11,6 +12,7 @@ function getRandomColor() {
 
 export default function TrendingLabels() {
   const [trends, setTrends] = useState([]);
+  const { drawerStateUpdate } = useDrawer();
 
   useEffect(() => {
     getTrendingLabels().then(setTrends);
@@ -27,6 +29,9 @@ export default function TrendingLabels() {
       {trends.map((trend, idx) => {
         return (
           <Link
+            onClick={() => {
+              drawerStateUpdate(false);
+            }}
             style={linkStyles[idx]}
             className="trending-tag"
             to={`/gif/${trend}`}

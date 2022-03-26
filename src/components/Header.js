@@ -2,7 +2,6 @@ import SearchGifs from "./SearchGifs";
 import "./Header.css";
 import { Link } from "wouter";
 import ThemeSwitch from "./ThemeSwitch";
-
 import MainDrawer from "./MainDrawer";
 
 export default function Header() {

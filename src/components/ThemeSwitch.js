@@ -1,12 +1,17 @@
 import "./ThemeSwitch.css";
-import { useThemeUpdate } from "context/ThemeContext";
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import { useTheme } from "context/ThemeContext";
 
 export default function Switch() {
-  const toggleTheme = useThemeUpdate();
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <label className="switch">
-      <input type="checkbox" id="checkbox" onChange={toggleTheme} />
+      <input
+        type="checkbox"
+        id="checkbox"
+        onChange={toggleTheme}
+        checked={!theme}
+      />
       <span className="slider round"></span>
     </label>
   );
