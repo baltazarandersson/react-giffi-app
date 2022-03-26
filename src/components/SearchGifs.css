@@ -46,7 +46,7 @@ form {
   width: 400px;
   overflow: hidden;
   display: flex;
-  background: var(--white-gradient-background);
+  background: var(--white-background);
 }
 @media screen and (max-width: 45rem) {
   .link-button {

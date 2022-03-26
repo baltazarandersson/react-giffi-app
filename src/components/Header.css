@@ -13,7 +13,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 3rem;
   line-height: 3rem;
-  background: -webkit-linear-gradient(#ffffff, #d7e1ec);
+  background: var(--white-background);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -43,7 +43,7 @@
 }
 .login,
 .register {
-  background: -webkit-linear-gradient(#ffffff, #d7e1ec);
+  background: var(--white-background);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

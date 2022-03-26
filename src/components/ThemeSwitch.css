@@ -12,7 +12,7 @@
 }
 
 .slider {
-  background-color: var(--white-dimmed);
+  background: var(--white-background);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -35,7 +35,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--dark-gray);
+  background: var(--dark-gray);
 }
 
 input:checked + .slider:before {
