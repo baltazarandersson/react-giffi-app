@@ -2,15 +2,25 @@
 
 ### App created with the React.js course of [midudev](https://youtube.com/playlist?list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC)
 
-## Learning objetives :
+## What I've learned so far in this project :
 
 - Getting involved with React.js
 
-- Continue learning about fetch and web APIs
+- Delving into fetch and web APIs
 
-- Getting intro JSX
+- Understanding JSX
 
-- Getting intro Routers
+- Getting involved to Routers using wouter.js to create a SPG
+
+- How to create custom hooks
+
+- Context and it's utilities
+
+- How to load components with lazyload and IntersectionObserver
+
+- Simple pagination and infinite scroll with IntersectionObserver
+
+- To use the Profiler tool of React
 
 ## [Online Demo](https://giffi-ten.vercel.app/)
 
