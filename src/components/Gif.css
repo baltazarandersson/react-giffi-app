@@ -36,7 +36,8 @@
 }
 @media screen and (max-width: 45rem) {
   .Gif img {
-    min-height: 75px;
+    min-height: 80px;
+    max-height: 120px;
   }
   .Gif p {
     visibility: visible;
