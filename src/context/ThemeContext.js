@@ -5,9 +5,13 @@ const ThemeContext = React.createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeContextProvider({ children }) {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") === "false" ? false : true
+  );
+
   function toggleTheme() {
-    setTheme(theme === true ? false : true);
+    localStorage.setItem("theme", !theme);
+    setTheme(!theme);
   }
 
   return (
