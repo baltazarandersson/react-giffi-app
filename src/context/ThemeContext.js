@@ -6,7 +6,7 @@ export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeContextProvider({ children }) {
   const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme")) && true
+    localStorage.getItem("theme") === "false" ? false : true
   );
 
   function toggleTheme() {
