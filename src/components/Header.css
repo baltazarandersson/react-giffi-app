@@ -1,5 +1,5 @@
 .header {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: row;
   padding: 2rem;
@@ -8,6 +8,9 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background: var(--dark-main);
+  z-index: 98;
+  top: 0;
 }
 .logo {
   font-family: "Red Hat Display", sans-serif;
@@ -55,7 +58,7 @@
 @media screen and (max-width: 45rem) {
   .header {
     flex-wrap: wrap;
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     gap: 1rem 0rem;
     font-size: 1rem;
     max-height: none;
