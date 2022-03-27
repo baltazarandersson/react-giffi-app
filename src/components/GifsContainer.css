@@ -6,9 +6,13 @@
   /* grid-auto-rows: 210px;
   grid-auto-flow: row dense; */
 }
-
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 960px) {
   .gifs-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+@media screen and (max-width: 720px) {
+  .gifs-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }

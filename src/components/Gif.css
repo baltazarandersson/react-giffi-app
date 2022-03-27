@@ -34,7 +34,7 @@
 .Gif:hover p {
   opacity: 1;
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 720px) {
   .Gif img {
     min-height: 80px;
     max-height: 120px;

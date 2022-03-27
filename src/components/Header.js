@@ -3,8 +3,19 @@ import "./Header.css";
 import { Link } from "wouter";
 import ThemeSwitch from "./ThemeSwitch";
 import MainDrawer from "./MainDrawer";
+import { useLocation } from "wouter";
+import { useCallback } from "react";
 
 export default function Header() {
+  const [path, pushLocation] = useLocation();
+
+  const handleChange = useCallback(
+    ({ keyword }) => {
+      pushLocation(`/gif/${keyword}`);
+    },
+    [pushLocation]
+  );
+
   return (
     <div className="header">
       <div>
@@ -13,7 +24,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <SearchGifs></SearchGifs>
+      <SearchGifs onSumbit={handleChange}></SearchGifs>
 
       <div>
         <div className="desktop-auth">

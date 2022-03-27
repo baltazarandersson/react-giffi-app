@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "./SearchGifs.css";
 import { Link, useLocation } from "wouter";
 
-export default function SearchGifs() {
+function SearchGifs({ onSumbit }) {
   const [query, setQuery] = useState("");
-  const [path, pushLocation] = useLocation();
 
   const inputRef = React.createRef();
 
@@ -14,7 +13,7 @@ export default function SearchGifs() {
         onSubmit={(evt) => {
           evt.preventDefault();
           inputRef.current.value = "";
-          pushLocation(`/gif/${query}`);
+          onSumbit({ query });
         }}
       >
         <input
@@ -30,3 +29,5 @@ export default function SearchGifs() {
     </div>
   );
 }
+
+export default React.memo(SearchGifs);

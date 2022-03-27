@@ -24,7 +24,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 720px) {
   .main > #lazytrend {
     display: none;
   }
@@ -34,6 +34,7 @@
   }
   .list-of-gifs > h2 {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
   .list-of-gifs {
     gap: 0.2rem;

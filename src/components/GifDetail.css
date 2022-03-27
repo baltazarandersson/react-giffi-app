@@ -5,7 +5,6 @@
   box-sizing: border-box;
   padding: 2rem;
   justify-content: center;
-  height: auto;
 }
 .gif-detail div {
   display: flex;
@@ -24,12 +23,13 @@ p {
 .gif-detail a {
   color: black;
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 960px) {
   .gif-detail {
     flex-direction: column;
   }
   .gif-detail div,
   img {
+    min-height: 150px;
     width: 100%;
   }
 }

@@ -48,13 +48,18 @@ form {
   display: flex;
   background: var(--white-background);
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 960px) {
   .link-button {
     display: none;
   }
   form {
     width: 100%;
   }
+  input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
   input {
     width: 100%;
     font-size: 1rem;
