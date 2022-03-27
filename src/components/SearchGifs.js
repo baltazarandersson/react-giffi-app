@@ -6,14 +6,14 @@ function SearchGifs({ onSumbit }) {
   const [query, setQuery] = useState("");
 
   const inputRef = React.createRef();
-
+  console.log(query);
   return (
     <div className="search-bar">
       <form
         onSubmit={(evt) => {
           evt.preventDefault();
+          onSumbit(query);
           inputRef.current.value = "";
-          onSumbit({ query });
         }}
       >
         <input

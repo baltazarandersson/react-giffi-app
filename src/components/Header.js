@@ -10,7 +10,8 @@ export default function Header() {
   const [path, pushLocation] = useLocation();
 
   const handleChange = useCallback(
-    ({ keyword }) => {
+    (keyword) => {
+      console.log({ keyword });
       pushLocation(`/gif/${keyword}`);
     },
     [pushLocation]
@@ -24,7 +25,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <SearchGifs onSumbit={handleChange}></SearchGifs>
+      <SearchGifs onSumbit={handleChange} />
 
       <div>
         <div className="desktop-auth">
