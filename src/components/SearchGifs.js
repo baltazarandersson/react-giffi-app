@@ -14,6 +14,7 @@ function SearchGifs({ onSumbit }) {
           evt.preventDefault();
           onSumbit(query);
           inputRef.current.value = "";
+          window.scrollTo(0, 0);
         }}
       >
         <input
@@ -22,7 +23,11 @@ function SearchGifs({ onSumbit }) {
           onChange={(e) => setQuery(e.target.value)}
           ref={inputRef}
         />
-        <Link className="link-button" to={`/gif/${query}`}>
+        <Link
+          className="link-button"
+          to={`/gif/${query}`}
+          onClick={() => window.scrollTo(0, 0)}
+        >
           {"Search"}
         </Link>
       </form>
