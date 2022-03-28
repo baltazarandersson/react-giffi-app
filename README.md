@@ -22,6 +22,6 @@
 
 - To use the Profiler tool of React
 
-## [Online Demo](https://giffi-ten.vercel.app/)
+## [Online Demo](https://giffi-react.vercel.app/)
 
 
