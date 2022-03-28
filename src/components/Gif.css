@@ -37,10 +37,6 @@
   .Gif {
     box-shadow: none !important;
   }
-  .Gif img {
-    min-height: 80px;
-    max-height: 120px;
-  }
   .Gif p {
     padding: 0 4px;
     opacity: 1;
