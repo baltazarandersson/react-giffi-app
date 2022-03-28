@@ -21,7 +21,7 @@ export default function GifDetail({ params }) {
 
   return (
     <div className="gif-detail">
-      <video loop autoplay="autoplay" src={url} alt="gif-hd" />
+      <video controls loop autoplay="autoplay" src={url} alt="gif-hd" />
       <div>
         <h1>{title}</h1>
         <p>{date}</p>
