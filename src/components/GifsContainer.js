@@ -4,7 +4,7 @@ import Masonry from "react-masonry-css";
 import getRandomColor from "./getRandomColor";
 
 export default function GifsContainer({ gifsState }) {
-  let gifsArray = gifsState.gifs;
+  let gifsArray = gifsState;
   const ids = gifsArray.map((o) => o.id);
   const gifsFiltered = gifsArray.filter(
     ({ id }, index) => !ids.includes(id, index + 1)

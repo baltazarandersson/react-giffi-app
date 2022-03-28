@@ -8,10 +8,10 @@ import debounce from "just-debounce-it";
 
 export default function ListOfGifs({ params }) {
   const { keyword } = params;
-  const { gifsState, setPage } = useGifs({ keyword });
+  const { gifs, loading, setPage } = useGifs({ keyword });
   const externalRef = useRef();
   const { isNearScreen } = useNearScreen({
-    externalRef: gifsState.loading ? null : externalRef,
+    externalRef: loading ? null : externalRef,
     once: false,
   });
 
@@ -24,12 +24,12 @@ export default function ListOfGifs({ params }) {
     if (isNearScreen) debounceHandleNextPage();
   }, [isNearScreen, debounceHandleNextPage]);
 
-  if (gifsState.loading) return <Loading />;
+  if (loading) return <Loading />;
 
   return (
     <div className="list-of-gifs">
       <h2>{params.title}</h2>
-      <GifsContainer gifsState={gifsState} />
+      <GifsContainer gifsState={gifs} />
       <div className="visor" ref={externalRef}></div>
     </div>
   );

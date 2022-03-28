@@ -3,9 +3,9 @@ import { API_KEY, API_URL } from "./settings";
 const fromApiResponseToGifDetail = (response) => {
   const { data } = response;
   const { images, import_datetime: date, bitly_url } = data;
-  const { mp4: url } = images.hd || images.original_mp4;
+  const { mp4: mp4_url } = images.hd || images.original_mp4;
   let title = data.title.length <= 3 ? "Untitled GIF" : data.title;
-  return { title, date, bitly_url, url };
+  return { title, date, bitly_url, mp4_url };
 };
 
 export default async function getGifDetail(id) {
