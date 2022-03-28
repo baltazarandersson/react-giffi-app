@@ -32,10 +32,5 @@ export default function GifsContainer({ gifsState }) {
         />
       ))}
     </Masonry>
-    // <div className="gifs-container">
-    //   {gifs.map(({ title, import_datetime, url, id }) => (
-    //     <Gif key={id} title={title} url={url} date={import_datetime} id={id} />
-    //   ))}
-    // </div>
   );
 }

@@ -72,7 +72,7 @@
     width: 100%;
   }
   .desktop-auth {
-    display: none !important;
+    display: none;
   }
   .drawer {
     display: block;

@@ -1,20 +1,3 @@
-/* .gifs-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  grid-template-rows: masonry;
-
-}
-@media screen and (max-width: 960px) {
-  .gifs-container {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
-}
-@media screen and (max-width: 720px) {
-  .gifs-container {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  }
-} */
 .gifs-container {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */

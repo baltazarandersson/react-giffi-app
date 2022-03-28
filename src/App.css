@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  transition: all 0.5s ease;
 }
 
 .App-content {
@@ -69,7 +68,4 @@
 .light-mode .menu-icon,
 .light-mode .drawer-icon {
   color: var(--dark-gray) !important;
-}
-.App * {
-  transition: background-color 0.3s ease !important;
 }

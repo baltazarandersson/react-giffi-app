@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@media screen and (min-width: 720px) {
+  body {
+    overflow: visible !important;
+  }
+}
