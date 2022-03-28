@@ -6,7 +6,7 @@ function SearchGifs({ onSumbit }) {
   const [query, setQuery] = useState("");
 
   const inputRef = React.createRef();
-  console.log(query);
+
   return (
     <div className="search-bar">
       <form
