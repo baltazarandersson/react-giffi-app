@@ -23,7 +23,7 @@ export default function GifDetail({ params }) {
     <div className="gif-detail">
       <video controls loop autoplay="autoplay" src={url} alt="gif-hd" />
       <div>
-        <h1>{title.length <= 3 ? "Untitled GIF" : title}</h1>
+        <h1>{title}</h1>
         <p>{date}</p>
         <a href={bitly_url}>source</a>
       </div>

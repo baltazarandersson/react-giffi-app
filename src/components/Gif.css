@@ -4,7 +4,6 @@
   font-size: 1rem;
   position: relative;
   height: fit-content;
-  transition: all 0.2s ease;
   overflow: hidden;
 }
 .Gif > a {
@@ -24,11 +23,6 @@
   padding: 6px 6px 0px 0px;
   bottom: 0px;
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -moz-transition: opacity 0.2s ease-in-out;
-  -ms-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
 }
 .Gif:hover p {
   opacity: 1;
