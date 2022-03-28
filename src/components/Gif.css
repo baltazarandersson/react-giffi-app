@@ -17,12 +17,11 @@
 }
 .Gif p {
   font-size: 0.8rem;
-  font-weight: 500;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  font-weight: 600;
+  color: black;
   text-align: start;
   position: absolute;
-  padding: 0px 4px;
+  padding: 6px 6px 0px 0px;
   bottom: 0px;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -35,13 +34,18 @@
   opacity: 1;
 }
 @media screen and (max-width: 720px) {
+  .Gif {
+    box-shadow: none !important;
+  }
   .Gif img {
     min-height: 80px;
     max-height: 120px;
   }
   .Gif p {
-    visibility: visible;
+    padding: 0 4px;
     opacity: 1;
+    color: white;
+    background: rgba(0, 0, 0, 0.6) !important;
   }
   .Gif p {
     font-size: 0.6rem;

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "wouter";
 import "./Gif.css";
 
-function Gif({ title, url, id }) {
+function Gif({ title, url, id, color }) {
+  const [isHover, isHoverUpdate] = useState(false);
+
   return (
-    <div className="Gif">
+    <div
+      className="Gif"
+      onMouseEnter={() => isHoverUpdate(!isHover)}
+      onMouseLeave={() => isHoverUpdate(!isHover)}
+      style={isHover ? { boxShadow: `0px 0px 0px 6px ${color}` } : null}
+    >
       <Link to={`/gif/id/${id}`}>
         <div className="gif-title">
-          <p>{title}</p>
+          <p style={{ background: color }}>
+            {title.length <= 3 ? "Untitled GIF" : title}
+          </p>
         </div>
         <img src={url} key={id} alt="gif" />
       </Link>

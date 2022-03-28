@@ -3,12 +3,7 @@ import { useEffect, useState, useMemo } from "react";
 import { Link } from "wouter";
 import getTrendingLabels from "../services/getTrendingLabels";
 import "./TrendingLabels.css";
-
-function getRandomColor() {
-  const randomNumber = () => Math.floor(Math.random() * (240 - 80 + 1) + 80);
-  const color = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
-  return color;
-}
+import getRandomColor from "./getRandomColor";
 
 export default function TrendingLabels() {
   const [trends, setTrends] = useState([]);

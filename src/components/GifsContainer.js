@@ -1,5 +1,7 @@
 import Gif from "./Gif";
 import "./GifsContainer.css";
+import Masonry from "react-masonry-css";
+import getRandomColor from "./getRandomColor";
 
 export default function GifsContainer({ gifsState }) {
   let gifsArray = gifsState.gifs;
@@ -11,10 +13,29 @@ export default function GifsContainer({ gifsState }) {
   const gifs = gifsFiltered;
 
   return (
-    <div className="gifs-container">
+    <Masonry
+      breakpointCols={{
+        default: 3,
+        480: 2,
+      }}
+      className="gifs-container"
+      columnClassName="gifs-container-grid_column"
+    >
       {gifs.map(({ title, import_datetime, url, id }) => (
-        <Gif key={id} title={title} url={url} date={import_datetime} id={id} />
+        <Gif
+          key={id}
+          title={title}
+          url={url}
+          date={import_datetime}
+          id={id}
+          color={getRandomColor()}
+        />
       ))}
-    </div>
+    </Masonry>
+    // <div className="gifs-container">
+    //   {gifs.map(({ title, import_datetime, url, id }) => (
+    //     <Gif key={id} title={title} url={url} date={import_datetime} id={id} />
+    //   ))}
+    // </div>
   );
 }

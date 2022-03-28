@@ -1,10 +1,9 @@
-.gifs-container {
+/* .gifs-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
   grid-template-rows: masonry;
-  /* grid-auto-rows: 210px;
-  grid-auto-flow: row dense; */
+
 }
 @media screen and (max-width: 960px) {
   .gifs-container {
@@ -15,4 +14,20 @@
   .gifs-container {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
+} */
+.gifs-container {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  width: auto;
+}
+.gifs-container-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+.gifs-container-grid_column > div {
+  background: grey;
+  margin-bottom: 1rem;
 }

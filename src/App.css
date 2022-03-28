@@ -71,5 +71,5 @@
   color: var(--dark-gray) !important;
 }
 .App * {
-  transition: all 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
 }
