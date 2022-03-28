@@ -6,6 +6,11 @@
   padding: 2rem;
   justify-content: center;
 }
+.gif-detail video {
+  object-fit: fill;
+  max-width: 70%;
+  max-height: calc(100vh - 11rem);
+}
 .gif-detail div {
   display: flex;
   flex-direction: column;
@@ -27,9 +32,13 @@ p {
   .gif-detail {
     flex-direction: column;
   }
-  .gif-detail div,
-  img {
+  .gif-detail div {
     min-height: 150px;
     width: 100%;
+  }
+  .gif-detail video {
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 100%;
   }
 }

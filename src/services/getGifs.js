@@ -9,7 +9,7 @@ export default async function getGifs({ keyword, limit = 21, page = 0 } = {}) {
   const { data } = responseData;
   const gifs = data.map((gif) => {
     const { images, title, import_datetime, id } = gif;
-    const { url } = images.original;
+    const { url } = images.fixed_height;
     return { title, import_datetime, url, id };
   });
 
