@@ -25,6 +25,7 @@ export default function TrendingLabels() {
         return (
           <Link
             onClick={() => {
+              window.scrollTo(0, 0);
               drawerStateUpdate(false);
             }}
             style={linkStyles[idx]}
