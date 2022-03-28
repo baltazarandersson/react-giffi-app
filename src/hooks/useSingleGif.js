@@ -3,20 +3,27 @@ import { useEffect, useState } from "react";
 import getGifDetail from "services/getGifDetail";
 
 export default function useSingleGif(id) {
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { gifs } = useGifsContext();
   const gifFromCache = gifs.find((singleGif) => singleGif.id === id);
   const [gif, setGif] = useState(gifFromCache);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     if (!gif) {
-      setLoading(true);
-      getGifDetail(id).then((gif) => {
-        setGif(gif);
-        setLoading(false);
-      });
+      setIsError(false);
+      setIsLoading(true);
+      getGifDetail(id)
+        .then((gif) => {
+          setGif(gif);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          setIsLoading(false);
+          setIsError(true);
+        });
     }
   }, [id, gif]);
 
-  return { gif, loading };
+  return { gif, isLoading, isError };
 }

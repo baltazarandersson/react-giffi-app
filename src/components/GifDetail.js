@@ -1,13 +1,14 @@
 import useSingleGif from "hooks/useSingleGif";
-import { useState, useEffect } from "react";
 import "./GifDetail.css";
 import Loading from "./Loading";
+import { Redirect } from "wouter";
 
 export default function GifDetail({ params }) {
   const { id } = params;
-  const { gif, loading } = useSingleGif(id);
+  const { gif, isLoading, isError } = useSingleGif(id);
 
-  if (loading) return <Loading />;
+  if (isLoading) return <Loading />;
+  if (isError) return <Redirect to="/404" />;
   if (!gif) return null;
 
   const { title, date, bitly_url, mp4_url } = gif;

@@ -1,7 +1,6 @@
 import { API_KEY, API_URL } from "./settings";
 
 const fromApiResponseToGifs = (response) => {
-  console.log(response);
   const { data = [] } = response;
   const gifs = data.map((gif) => {
     const { images, title, import_datetime: date, id, bitly_url } = gif;

@@ -29,7 +29,7 @@ export default function ListOfGifs({ params }) {
   return (
     <div className="list-of-gifs">
       <h2>{params.title}</h2>
-      <GifsContainer gifsState={gifs} />
+      <GifsContainer gifs={gifs} />
       <div className="visor" ref={externalRef}></div>
     </div>
   );
