@@ -41,12 +41,12 @@
 .light-mode .search-bar form {
   background: var(--dark-gray) !important;
 }
-.light-mode .gif-detail div {
+.light-mode .gif-detail-container div {
   background: var(--dark-gray) !important;
 }
-.light-mode .gif-detail h1,
-.light-mode .gif-detail a,
-.light-mode .gif-detail p {
+.light-mode .gif-detail-container h1,
+.light-mode .gif-detail-container a,
+.light-mode .gif-detail-container p {
   color: var(--white-dimmed) !important;
 }
 .light-mode .header {
