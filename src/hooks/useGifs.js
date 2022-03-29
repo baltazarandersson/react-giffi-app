@@ -26,7 +26,6 @@ export default function useGifs({ keyword }) {
 
   useEffect(() => {
     if (page === INITIAL_PAGE) return;
-    console.log(page);
     getGifs({ keyword, page }).then((nextGifs) => {
       setGifs((prevState) => prevState.concat(nextGifs));
     });
