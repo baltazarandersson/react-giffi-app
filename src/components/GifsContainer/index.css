@@ -1,16 +1,16 @@
-.gifs-container {
+.gifs-wrapper {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   margin-left: -1rem; /* gutter size offset */
   width: auto;
 }
-.gifs-container-grid_column {
+.gifs-wrapper--grid_column {
   padding-left: 1rem; /* gutter size */
   background-clip: padding-box;
 }
 
-.gifs-container-grid_column > div {
+.gifs-wrapper--grid_column > div {
   background: grey;
   margin-bottom: 1rem;
 }

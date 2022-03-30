@@ -27,8 +27,8 @@ export default function ListOfGifs({ params }) {
   if (loading) return <Spinner />;
 
   return (
-    <div className="list-of-gifs">
-      <h2>{params.title}</h2>
+    <div className="gifs-container">
+      <h2 className="gifs-container__h2">{params.title}</h2>
       <GifsContainer gifs={gifs} />
       <div className="visor" ref={externalRef}></div>
     </div>

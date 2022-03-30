@@ -8,8 +8,9 @@ function SearchGifs({ onSumbit }) {
   const inputRef = React.createRef();
 
   return (
-    <div className="search-bar">
+    <div className=".header__div--2 search-bar">
       <form
+        className="search-bar__form"
         onSubmit={(evt) => {
           evt.preventDefault();
           onSumbit(query);
@@ -18,13 +19,14 @@ function SearchGifs({ onSumbit }) {
         }}
       >
         <input
+          className="search-bar__input"
           type="text"
           placeholder="Search any GIF here!"
           onChange={(e) => setQuery(e.target.value)}
           ref={inputRef}
         />
         <Link
-          className="link-button"
+          className="search-bar__button"
           to={`/gif/${query}`}
           onClick={() => window.scrollTo(0, 0)}
         >

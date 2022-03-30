@@ -1,4 +1,4 @@
-.Gif {
+.gifs-wrapper__gif {
   box-sizing: border-box;
   color: black;
   font-size: 1rem;
@@ -6,38 +6,39 @@
   height: fit-content;
   overflow: hidden;
 }
-.Gif > a {
+.gifs-wrapper__gif__link {
   display: flex;
 }
-.Gif img {
+.gifs-wrapper__gif__img {
   cursor: pointer;
   width: 100%;
   min-height: 100px;
 }
-.Gif p {
+.gifs-wrapper__gif__title {
   font-size: 0.8rem;
   font-weight: 800;
   color: black;
   text-align: start;
   position: absolute;
   padding: 6px 6px 0px 0px;
+  margin: 0;
   bottom: 0px;
   opacity: 0;
 }
-.Gif:hover p {
+.gifs-wrapper__gif:hover .gifs-wrapper__gif__title {
   opacity: 1;
 }
 @media screen and (max-width: 720px) {
-  .Gif {
+  .gifs-wrapper__gif {
     box-shadow: none !important;
   }
-  .Gif p {
+  .gifs-wrapper__gif__title {
     padding: 0 4px;
     opacity: 1;
     color: white;
     background: rgba(0, 0, 0, 0.6) !important;
   }
-  .Gif p {
+  .gifs-wrapper__gif__title {
     font-size: 0.6rem;
   }
 }

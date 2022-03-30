@@ -26,10 +26,10 @@ export default function Drawer() {
             }}
           ></HiOutlineX>
 
-          <div className="mobile-auth">
+          <div className="drawer-menu__auth">
             <ThemeSwitch></ThemeSwitch>
-            <div className="login">Login</div>
-            <div className="register">Register</div>
+            <div className="header__auth__login">Login</div>
+            <div className="header__auth__register">Register</div>
           </div>
         </div>
         <TrendingBox></TrendingBox>

@@ -6,9 +6,8 @@
   margin: 0;
   color: black;
 }
-input,
-.link-button,
-form {
+.search-bar__input,
+.search-bar__button {
   font-weight: 600;
   box-sizing: border-box;
   color: black;
@@ -19,7 +18,7 @@ form {
   text-decoration: none;
   text-align: center;
 }
-.link-button {
+.search-bar__button {
   width: 30%;
   display: flex;
   align-items: center;
@@ -27,7 +26,7 @@ form {
   height: 3rem;
   border-left: 1px solid gray;
 }
-input {
+.search-bar__input {
   outline: none;
   font-family: inherit;
   width: 70%;
@@ -38,10 +37,10 @@ input {
   text-align: start;
   padding-left: 1rem;
 }
-input:focus::placeholder {
+.search-bar__input:focus::placeholder {
   color: transparent;
 }
-form {
+.search-bar__form {
   height: 3rem;
   width: 400px;
   overflow: hidden;
@@ -49,18 +48,18 @@ form {
   background: var(--white-background);
 }
 @media screen and (max-width: 960px) {
-  .link-button {
+  .search-bar__button {
     display: none;
   }
-  form {
+  .search-bar__form {
     width: 100%;
   }
-  input {
+  .search-bar__input {
     width: 100%;
   }
 }
 @media screen and (max-width: 720px) {
-  input {
+  .search-bar__input {
     width: 100%;
     font-size: 1rem;
   }

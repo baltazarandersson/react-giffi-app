@@ -1,8 +1,5 @@
-.App {
+.app {
   text-align: center;
-}
-
-.App-content {
   background-color: var(--dark-main);
   min-height: 100vh;
   display: flex;
@@ -22,50 +19,52 @@
 }
 
 @media screen and (max-width: 720px) {
-  .App-content {
+  .app {
     padding-top: 9rem;
   }
 }
 
-.light-mode h2,
-.light-mode .logo,
-.light-mode .login,
-.light-mode .register {
+.app--lightmode {
+  background: var(--white-dimmed) !important;
+}
+.app--lightmode .gifs-container__h2,
+.app--lightmode .trends-container__h2,
+.app--lightmode .header__logo,
+.app--lightmode .header__auth__login,
+.app--lightmode .header__auth__register {
   background: var(--dark-gray) !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
-.light-mode .App-content {
-  background: var(--white-dimmed) !important;
-}
-.light-mode .search-bar form {
+.app--lightmode .search-bar__form {
   background: var(--dark-gray) !important;
 }
-.light-mode .gif-detail-container div {
+.app--lightmode .details-container__info {
   background: var(--dark-gray) !important;
 }
-.light-mode .gif-detail-container h1,
-.light-mode .gif-detail-container a,
-.light-mode .gif-detail-container p {
+.app--lightmode .details-container__info__h1,
+.app--lightmode .details-container__info__a,
+.app--lightmode .details-container__info__p {
   color: var(--white-dimmed) !important;
 }
-.light-mode .header {
+.app--lightmode .header {
   background: var(--white-dimmed);
 }
-.light-mode .link-button,
-.light-mode .search-bar form input {
+.app--lightmode .search-bar__form,
+.app--lightmode .search-bar__button,
+.app--lightmode .search-bar__input {
   color: var(--white-dimmed) !important;
 }
-.light-mode .search-bar form input::placeholder {
+.app--lightmode .search-bar__input::placeholder {
   color: lightgray;
 }
-.light-mode .loader .fulfilling-square-spinner {
-  border: 4px solid var(--dark-gray);
-}
-.light-mode .drawer-menu {
+.app--lightmode .drawer-menu {
   background: var(--white-dimmed) !important;
 }
-.light-mode .menu-icon,
-.light-mode .drawer-icon {
+.app--lightmode .menu-icon,
+.app--lightmode .drawer-icon {
   color: var(--dark-gray) !important;
+}
+.app--lightmode .loader .fulfilling-square-spinner {
+  border: 4px solid var(--dark-gray);
 }

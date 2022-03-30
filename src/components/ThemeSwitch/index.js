@@ -9,20 +9,21 @@ export default function Switch() {
   return (
     <label className="switch">
       <input
+        className="switch__input"
         type="checkbox"
         id="checkbox"
         onChange={() => toggleTheme()}
         checked={!theme}
       />
-      <span className="slider round"></span>
+      <span className="switch__slider switch__slider--round"></span>
       <BsFillSunFill
-        className={classNames("switch-icon", "switch-sun", {
-          "switch-icon-visible": theme,
+        className={classNames("switch__icon", "switch__icon__sun", {
+          "switch__icon--visible": theme,
         })}
       />
       <BsFillMoonFill
-        className={classNames("switch-icon", "switch-moon", {
-          "switch-icon-visible": !theme,
+        className={classNames("switch__icon", "switch__icon__moon", {
+          "switch__icon--visible": !theme,
         })}
       />
     </label>

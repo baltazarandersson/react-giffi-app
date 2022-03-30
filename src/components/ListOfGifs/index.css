@@ -1,4 +1,4 @@
-.main {
+.app-content {
   display: flex;
   flex-direction: row;
   padding: 2rem;
@@ -8,14 +8,14 @@
   width: 100%;
 }
 
-.list-of-gifs {
+.gifs-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 80%;
   gap: 2rem;
 }
-.list-of-gifs > h2 {
+.gifs-container__h2 {
   font-size: 1.4rem;
   font-weight: 900;
   text-align: start;
@@ -25,18 +25,15 @@
   -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 720px) {
-  .main > #lazytrend {
-    display: none;
-  }
-  .main {
+  .app-content {
     flex-direction: column;
     padding: 1rem;
   }
-  .list-of-gifs > h2 {
+  .gifs-container__h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
-  .list-of-gifs {
+  .gifs-container {
     gap: 0.2rem;
     width: 100%;
   }

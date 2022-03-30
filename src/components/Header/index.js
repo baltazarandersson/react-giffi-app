@@ -18,19 +18,21 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div>
-        <Link className="logo" to="/">
+      <div className="header__div header__div--1">
+        <Link className="header__logo" to="/">
           GIFFI
         </Link>
       </div>
 
-      <SearchGifs onSumbit={handleChange} />
+      <div className="header__div--2">
+        <SearchGifs onSumbit={handleChange} />
+      </div>
 
-      <div>
-        <div className="desktop-auth">
+      <div className="header__div header__div--3">
+        <div className="header__auth">
           <ThemeSwitch></ThemeSwitch>
-          <div className="login">Login</div>
-          <div className="register">Register</div>
+          <div className="header__auth__login">Login</div>
+          <div className="header__auth__register">Register</div>
         </div>
         <Drawer></Drawer>
       </div>

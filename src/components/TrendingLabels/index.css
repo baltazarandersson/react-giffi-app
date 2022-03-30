@@ -1,4 +1,11 @@
-.trending-tag {
+.trends-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+.trends-wrapper__label {
   display: flex;
   align-items: center;
   color: black;

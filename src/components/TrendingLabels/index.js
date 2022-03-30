@@ -20,7 +20,7 @@ export default function TrendingLabels() {
   }, [trends]);
 
   return (
-    <div>
+    <div className="trends-wrapper">
       {trends.map((trend, idx) => {
         return (
           <Link
@@ -29,7 +29,7 @@ export default function TrendingLabels() {
               drawerStateUpdate(false);
             }}
             style={linkStyles[idx]}
-            className="trending-tag"
+            className="trends-wrapper__label"
             to={`/gif/${trend}`}
             key={`${trend}`}
           >

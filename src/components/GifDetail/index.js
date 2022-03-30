@@ -29,13 +29,23 @@ export default function GifDetail({ params }) {
   }
 
   return (
-    <div className="gif-detail-container">
-      <div className="gif-detail-player" ref={videoRef}>
-        <video muted loop autoPlay="autoplay" src={mp4_url} alt="gif-movie" />
-        <button onClick={() => toggleFullscreen()}>
+    <div className="details-container">
+      <div className="details-container__player" ref={videoRef}>
+        <video
+          className="details-container__player__video"
+          muted
+          loop
+          autoPlay="autoplay"
+          src={mp4_url}
+          alt="gif-movie"
+        />
+        <button
+          className="details-container__player__button"
+          onClick={() => toggleFullscreen()}
+        >
           <AiOutlineFullscreen
             className={classNames("fullscreen-icon", {
-              "fullscreen-icon-visible": !isFullscreen,
+              "fullscreen-icon--visible": !isFullscreen,
             })}
           />
           <AiOutlineFullscreenExit
@@ -45,10 +55,12 @@ export default function GifDetail({ params }) {
           />
         </button>
       </div>
-      <div className="gif-detail-info">
-        <h1>{title}</h1>
-        <p>{date}</p>
-        <a href={bitly_url}>source</a>
+      <div className="details-container__info">
+        <h1 className="details-container__info__h1">{title}</h1>
+        <p className="details-container__info__p">{date}</p>
+        <a className="details-container__info__a" href={bitly_url}>
+          source
+        </a>
       </div>
     </div>
   );

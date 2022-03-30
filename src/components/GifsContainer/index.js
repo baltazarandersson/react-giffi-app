@@ -15,8 +15,8 @@ export default function GifsContainer({ gifs }) {
         default: 3,
         480: 2,
       }}
-      className="gifs-container"
-      columnClassName="gifs-container-grid_column"
+      className="gifs-wrapper"
+      columnClassName="gifs-wrapper--grid_column"
     >
       {gifsFiltered.map(({ title, import_datetime, url, id }) => (
         <Gif

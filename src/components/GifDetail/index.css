@@ -1,4 +1,4 @@
-.gif-detail-container {
+.details-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -6,7 +6,7 @@
   padding: 2rem;
   justify-content: center;
 }
-.gif-detail-info {
+.details-container__info {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -16,17 +16,17 @@
   background: var(--white-background);
   color: black;
 }
-.gif-detail-player {
+.details-container__player {
   max-width: 70%;
   max-height: calc(100vh - 11rem);
   position: relative;
 }
-.gif-detail-player > video {
+.details-container__player__video {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
-.gif-detail-player > button {
+.details-container__player__button {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -46,35 +46,35 @@
   transition: opacity 0.5s ease;
   opacity: 0;
 }
-.fullscreen-icon-visible {
+.fullscreen-icon--visible {
   opacity: 1;
 }
-.gif-detail-container h1,
-p {
+.details-container__info__h1,
+.details-container__info__p {
   margin: 0px;
 }
-.gif-detail-container a {
+.details-container__info__a {
   color: black;
 }
 @media screen and (max-width: 960px) {
-  .gif-detail-container {
+  .details-container {
     flex-direction: column;
   }
-  .gif-detail-info {
+  .details-container__info {
     min-height: 150px;
     width: 100%;
   }
-  .gif-detail-player {
+  .details-container__player {
     max-width: 100%;
     min-height: 150px;
     max-height: 100%;
   }
 }
 @media all and (display-mode: fullscreen) {
-  .gif-detail-player > video {
+  .details-container__player__video {
     object-fit: contain;
   }
-  .gif-detail-player > button {
+  .details-container__player__button {
     width: 60px;
     height: 60px;
     top: 3rem;
