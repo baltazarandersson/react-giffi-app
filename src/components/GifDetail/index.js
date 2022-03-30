@@ -43,20 +43,15 @@ export default function GifDetail({ params }) {
           className="details-container__player__button"
           onClick={() => toggleFullscreen()}
         >
-          <AiOutlineFullscreen
-            className={classNames("fullscreen-icon", {
-              "fullscreen-icon--visible": !isFullscreen,
-            })}
-          />
-          <AiOutlineFullscreenExit
-            className={classNames("fullscreen-icon", {
-              "fullscreen-icon-visible": isFullscreen,
-            })}
-          />
+          {!isFullscreen ? (
+            <AiOutlineFullscreen className="fullscreen-icon" />
+          ) : (
+            <AiOutlineFullscreenExit className="fullscreen-icon" />
+          )}
         </button>
       </div>
       <div className="details-container__info">
-        <h1 className="details-container__info__h1">{title}</h1>
+        <h2 className="details-container__info__h2">{title}</h2>
         <p className="details-container__info__p">{date}</p>
         <a className="details-container__info__a" href={bitly_url}>
           source
