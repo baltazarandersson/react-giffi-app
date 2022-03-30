@@ -1,7 +1,7 @@
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import classNames from "classnames";
-import "./ThemeSwitch.css";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import { useTheme } from "context/ThemeContext";
+import "./index.css";
 
 export default function Switch() {
   const { theme, toggleTheme } = useTheme();

@@ -1,9 +1,9 @@
-import { useDrawer } from "context/DrawerContext";
 import { useEffect, useState, useMemo } from "react";
 import { Link } from "wouter";
-import getTrendingLabels from "../services/getTrendingLabels";
-import "./TrendingLabels.css";
-import getRandomColor from "./getRandomColor";
+import { useDrawer } from "context/DrawerContext";
+import getTrendingLabels from "services/getTrendingLabels";
+import getRandomColor from "services/getRandomColor";
+import "./index.css";
 
 export default function TrendingLabels() {
   const [trends, setTrends] = useState([]);

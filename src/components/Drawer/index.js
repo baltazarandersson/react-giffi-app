@@ -1,10 +1,10 @@
-import "./MainDrawer.css";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { useDrawer } from "context/DrawerContext";
 import ThemeSwitch from "components/ThemeSwitch";
 import TrendingBox from "components/TrendingBox";
-import { useDrawer } from "context/DrawerContext";
+import "./index.css";
 
-export default function MainDrawer() {
+export default function Drawer() {
   const { drawerState, drawerStateUpdate } = useDrawer();
 
   return (

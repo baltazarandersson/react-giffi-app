@@ -1,10 +1,9 @@
-import SearchGifs from "./SearchGifs";
-import "./Header.css";
-import { Link } from "wouter";
-import ThemeSwitch from "./ThemeSwitch";
-import MainDrawer from "./MainDrawer";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useCallback } from "react";
+import SearchGifs from "components/SearchGifs";
+import ThemeSwitch from "components/ThemeSwitch";
+import Drawer from "components/Drawer";
+import "./index.css";
 
 export default function Header() {
   const [path, pushLocation] = useLocation();
@@ -33,7 +32,7 @@ export default function Header() {
           <div className="login">Login</div>
           <div className="register">Register</div>
         </div>
-        <MainDrawer></MainDrawer>
+        <Drawer></Drawer>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
-import "./Gif.css";
+import "./index.css";
 
 function Gif({ title, url, id, color }) {
   const [isHover, isHoverUpdate] = useState(false);

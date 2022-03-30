@@ -1,6 +1,7 @@
 import React from "react";
+import "./index.css";
 
-export default function Loading() {
+export default function Spinner() {
   return (
     <>
       <div className="loader">

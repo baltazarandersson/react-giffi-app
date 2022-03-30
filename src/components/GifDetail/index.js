@@ -1,10 +1,10 @@
+import classNames from "classnames";
 import React, { useRef, useState } from "react";
-import useSingleGif from "hooks/useSingleGif";
-import "./GifDetail.css";
-import Loading from "./Loading";
 import { Redirect } from "wouter";
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai";
-import classNames from "classnames";
+import useSingleGif from "hooks/useSingleGif";
+import Spinner from "components/Spinner";
+import "./index.css";
 
 export default function GifDetail({ params }) {
   const { id } = params;
@@ -12,7 +12,7 @@ export default function GifDetail({ params }) {
   const videoRef = useRef();
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Spinner />;
   if (isError) return <Redirect to="/404" />;
   if (!gif) return null;
 

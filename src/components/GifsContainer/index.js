@@ -1,7 +1,7 @@
-import Gif from "./Gif";
-import "./GifsContainer.css";
 import Masonry from "react-masonry-css";
-import getRandomColor from "./getRandomColor";
+import Gif from "components/Gif";
+import getRandomColor from "services/getRandomColor";
+import "./index.css";
 
 export default function GifsContainer({ gifs }) {
   const ids = gifs.map((o) => o.id);

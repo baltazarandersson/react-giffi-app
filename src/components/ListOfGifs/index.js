@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import Loading from "./Loading";
-import useGifs from "../hooks/useGifs";
-import GifsContainer from "./GifsContainer";
-import "./ListOfGifs.css";
-import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
+import Spinner from "components/Spinner/index";
+import GifsContainer from "components/GifsContainer";
+import useGifs from "hooks/useGifs";
+import useNearScreen from "hooks/useNearScreen";
+import "./index.css";
 
 export default function ListOfGifs({ params }) {
   const { keyword } = params;
@@ -24,7 +24,7 @@ export default function ListOfGifs({ params }) {
     if (isNearScreen) debounceHandleNextPage();
   }, [isNearScreen, debounceHandleNextPage]);
 
-  if (loading) return <Loading />;
+  if (loading) return <Spinner />;
 
   return (
     <div className="list-of-gifs">

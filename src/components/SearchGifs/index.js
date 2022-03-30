@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./SearchGifs.css";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
+import "./index.css";
 
 function SearchGifs({ onSumbit }) {
   const [query, setQuery] = useState("");

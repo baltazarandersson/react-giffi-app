@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import getGifs from "services/getGifs";
-import "components/Loading.css";
 import { useGifsContext } from "context/GifsContext";
+// import "components/Spinner/index.css";
 
 let INITIAL_PAGE = 0;
 
