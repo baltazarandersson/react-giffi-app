@@ -42,7 +42,7 @@
 .app--lightmode .details-container__info {
   background: var(--dark-gray) !important;
 }
-.app--lightmode .details-container__info__h1,
+.app--lightmode .details-container__info__h2,
 .app--lightmode .details-container__info__a,
 .app--lightmode .details-container__info__p {
   color: var(--white-dimmed) !important;
