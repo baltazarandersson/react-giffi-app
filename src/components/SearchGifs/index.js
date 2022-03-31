@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { Link } from "wouter";
 import "./index.css";
+import { Link, useLocation } from "wouter";
+import { useCallback } from "react";
 
-function SearchGifs({ onSumbit }) {
+const RATINGS = ["g", "pg", "pg-13", "r"];
+
+function SearchGifs() {
   const [query, setQuery] = useState("");
+  const [rating, setRating] = useState(RATINGS[0]);
+  const [path, pushLocation] = useLocation();
 
   const inputRef = React.createRef();
+
+  const onSumbit = useCallback(() => {
+    pushLocation(`/search/${query}`);
+  }, [query, pushLocation]);
 
   return (
     <div className=".header__div--2 search-bar">
@@ -32,6 +41,12 @@ function SearchGifs({ onSumbit }) {
         >
           {"Search"}
         </Link>
+        {/* <select>
+          <option disabled>Choose a Rating</option>
+          {RATINGS.map((rating) => {
+            return <option key={rating}>{rating}</option>;
+          })}
+        </select> */}
       </form>
     </div>
   );

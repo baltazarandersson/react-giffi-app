@@ -1,21 +1,10 @@
-import { Link, useLocation } from "wouter";
-import { useCallback } from "react";
+import { Link } from "wouter";
 import SearchGifs from "components/SearchGifs";
 import ThemeSwitch from "components/ThemeSwitch";
 import Drawer from "components/Drawer";
 import "./index.css";
 
 export default function Header() {
-  const [path, pushLocation] = useLocation();
-
-  const handleChange = useCallback(
-    (keyword) => {
-      console.log({ keyword });
-      pushLocation(`/search/${keyword}`);
-    },
-    [pushLocation]
-  );
-
   return (
     <div className="header">
       <div className="header__div header__div--1">
@@ -25,7 +14,7 @@ export default function Header() {
       </div>
 
       <div className="header__div--2">
-        <SearchGifs onSumbit={handleChange} />
+        <SearchGifs />
       </div>
 
       <div className="header__div header__div--3">
