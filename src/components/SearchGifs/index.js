@@ -27,7 +27,7 @@ function SearchGifs({ onSumbit }) {
         />
         <Link
           className="search-bar__button"
-          to={`/gif/${query}`}
+          to={`/search/${query}`}
           onClick={() => window.scrollTo(0, 0)}
         >
           {"Search"}

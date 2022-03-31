@@ -30,7 +30,7 @@ export default function TrendingLabels() {
             }}
             style={linkStyles[idx]}
             className="trends-wrapper__label"
-            to={`/gif/${trend}`}
+            to={`/search/${trend}`}
             key={`${trend}`}
           >
             {trend}

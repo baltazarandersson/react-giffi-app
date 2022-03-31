@@ -11,7 +11,7 @@ export default function Header() {
   const handleChange = useCallback(
     (keyword) => {
       console.log({ keyword });
-      pushLocation(`/gif/${keyword}`);
+      pushLocation(`/search/${keyword}`);
     },
     [pushLocation]
   );

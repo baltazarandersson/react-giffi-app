@@ -15,7 +15,7 @@ function App() {
     <div className={classNames("app", { "app--lightmode": !theme })}>
       <Header />
       <Route path="/" component={HomePage} />
-      <Route path="/gif/:keyword" component={SearchResult} />
+      <Route path="/search/:keyword" component={SearchResult} />
       <Route path="/gif/id/:id" component={Detials} />
 
       <Route

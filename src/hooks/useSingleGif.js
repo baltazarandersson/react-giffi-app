@@ -6,9 +6,12 @@ export default function useSingleGif(id) {
   const [isLoading, setIsLoading] = useState(false);
   const { gifs } = useGifsContext();
   const gifFromCache = gifs.find((singleGif) => singleGif.id === id);
+  if (gifFromCache) {
+    gifFromCache.title =
+      gifFromCache.title.length <= 3 ? "Untitled GIF" : gifFromCache.title;
+  }
   const [gif, setGif] = useState(gifFromCache);
   const [isError, setIsError] = useState(false);
-
   useEffect(() => {
     if (!gif) {
       setIsError(false);
