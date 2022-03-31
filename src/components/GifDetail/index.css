@@ -33,6 +33,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+  display: block;
 }
 .details-container__player__button {
   position: absolute;
@@ -62,6 +63,7 @@
 @media screen and (max-width: 960px) {
   .details-container {
     flex-direction: column;
+    padding: 1rem;
   }
   .details-container__info {
     min-height: 150px;

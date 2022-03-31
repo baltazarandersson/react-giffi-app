@@ -32,9 +32,10 @@
 .app--lightmode .header__logo,
 .app--lightmode .header__auth__login,
 .app--lightmode .header__auth__register {
-  background: var(--dark-gray) !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+  background: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: var(--dark-gray) !important;
 }
 .app--lightmode .search-bar__form {
   background: var(--dark-gray) !important;
