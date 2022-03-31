@@ -18,14 +18,6 @@
   text-decoration: none;
   text-align: center;
 }
-.search-bar__button {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  border-left: 1px solid gray;
-}
 .search-bar__input {
   outline: none;
   font-family: inherit;
@@ -36,6 +28,28 @@
   box-sizing: border-box;
   text-align: start;
   padding-left: 1rem;
+  border-right: 1px solid gray;
+}
+.search-bar__button {
+  font-family: inherit;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-right: 1px solid gray;
+  background: transparent;
+}
+.search-bar__select {
+  display: flex;
+  justify-content: center;
+  width: 4rem;
+  font-weight: bold;
+  font-family: inherit;
+  background: transparent;
+  text-align-last: center;
+  margin: 0;
+  border: none;
 }
 .search-bar__input:focus::placeholder {
   color: transparent;

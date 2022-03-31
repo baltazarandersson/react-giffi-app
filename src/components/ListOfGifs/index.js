@@ -7,8 +7,8 @@ import useNearScreen from "hooks/useNearScreen";
 import "./index.css";
 
 export default function ListOfGifs({ params }) {
-  const { keyword } = params;
-  const { gifs, loading, setPage } = useGifs({ keyword });
+  const { keyword, rating } = params;
+  const { gifs, loading, setPage } = useGifs({ keyword, rating });
   const externalRef = useRef();
   const { isNearScreen } = useNearScreen({
     externalRef: loading ? null : externalRef,
