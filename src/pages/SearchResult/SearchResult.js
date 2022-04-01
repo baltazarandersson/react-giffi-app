@@ -6,7 +6,7 @@ export default function SearchResult({ params }) {
   const { gifs } = useGifsContext();
 
   useSEO({
-    title: `${gifs.length} results of ${decodeURI(params.keyword)}`,
+    title: `${gifs.length} GIFs of ${decodeURI(params.keyword)}`,
     description: `${gifs.length} results of the '${decodeURI(
       params.keyword
     )}' search, only on GIFFI`,
