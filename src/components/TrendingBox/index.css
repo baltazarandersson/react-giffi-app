@@ -1,6 +1,6 @@
 #lazytrend {
-  max-width: 20%;
-  min-width: 20%;
+  display: flex;
+  justify-content: flex-end;
 }
 .trends-container {
   display: flex;
@@ -21,9 +21,6 @@
 }
 
 @media screen and (max-width: 45rem) {
-  #lazytrend {
-    max-width: 100%;
-  }
   .app-content #lazytrend {
     display: none;
   }
