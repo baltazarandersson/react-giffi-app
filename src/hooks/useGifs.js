@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getGifs from "services/getGifs";
 import { useGifsContext } from "context/GifsContext";
+import { useRoute } from "wouter";
 // import "components/Spinner/index.css";
 
 let INITIAL_PAGE = 0;
@@ -10,10 +11,11 @@ export default function useGifs({ keyword, rating }) {
   const [loading, setLoading] = useState(false);
   const { gifs, setGifs } = useGifsContext();
   const lastKeyword = localStorage.getItem("lastKeyword");
+  const [home, params] = useRoute("/");
 
   useEffect(() => {
-    if (lastKeyword === keyword) {
-      return gifs;
+    if (lastKeyword === keyword && home) {
+      return;
     } else {
       setLoading(true);
       getGifs({ keyword, rating }).then((gifs) => {
@@ -22,7 +24,7 @@ export default function useGifs({ keyword, rating }) {
         localStorage.setItem("lastKeyword", keyword);
       });
     }
-  }, [keyword, setGifs, gifs, lastKeyword, rating]);
+  }, [keyword, setGifs, lastKeyword, rating, home]);
 
   useEffect(() => {
     if (page === INITIAL_PAGE) return;

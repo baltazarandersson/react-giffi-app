@@ -1,24 +1,47 @@
-import React, { useState } from "react";
-import "./index.css";
-import { Link, useLocation } from "wouter";
+import React, { useReducer, useState } from "react";
 import { useCallback } from "react";
+import { useLocation } from "wouter";
 import { useRoute } from "wouter";
+import "./index.css";
 
 const RATINGS = ["g", "pg", "pg-13", "r"];
+const ACTIONS = {
+  SET_RATING: "set-rating",
+  SET_QUERY: "set-query",
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.SET_RATING:
+      return {
+        ...state,
+        rating: action.payload,
+      };
+    case ACTIONS.SET_QUERY:
+      return {
+        ...state,
+        query: action.payload,
+      };
+
+    default:
+      return state;
+  }
+};
 
 function SearchGifs() {
   const [path, pushLocation] = useLocation();
   const [isSearch, params] = useRoute("/search/:initialKeyword/:initialRating");
-
   const { initialKeyword, initialRating } = isSearch
     ? params
     : { initialKeyword: "", initialRating: "r" };
-  console.log(initialKeyword);
-
-  const [query, setQuery] = useState(initialKeyword);
-  const [rating, setRating] = useState(initialRating);
 
   const inputRef = React.createRef();
+
+  const [state, dispatch] = useReducer(reducer, {
+    query: decodeURI(initialKeyword),
+    rating: initialRating,
+  });
+  const { query, rating } = state;
 
   const handleSumbit = useCallback(
     (evt) => {
@@ -31,7 +54,7 @@ function SearchGifs() {
   );
 
   const handleChangeRating = (evt) => {
-    setRating(evt.target.value);
+    dispatch({ type: ACTIONS.SET_RATING, payload: evt.target.value });
   };
 
   return (
@@ -41,12 +64,12 @@ function SearchGifs() {
           className="search-bar__input"
           type="text"
           placeholder="Search any GIF here!"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) =>
+            dispatch({ type: ACTIONS.SET_QUERY, payload: e.target.value })
+          }
           ref={inputRef}
+          value={query}
         />
-        <button className="search-bar__button" onClick={handleSumbit}>
-          {"Search"}
-        </button>
         <select
           className="search-bar__select"
           onChange={handleChangeRating}
@@ -57,6 +80,9 @@ function SearchGifs() {
             return <option key={rating}>{rating}</option>;
           })}
         </select>
+        <button className="search-bar__button" onClick={handleSumbit}>
+          {"Search"}
+        </button>
       </form>
     </div>
   );

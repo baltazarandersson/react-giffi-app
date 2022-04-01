@@ -17,7 +17,6 @@ export default async function getGifs({
   page = 0,
   rating,
 } = {}) {
-  console.log(rating);
   const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&rating=${rating}&offset=${
     page * limit
   }&lang=en`;
