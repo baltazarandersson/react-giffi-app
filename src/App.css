@@ -45,7 +45,8 @@
 }
 .app--lightmode .details-container__info__h2,
 .app--lightmode .details-container__info__a,
-.app--lightmode .details-container__info__p {
+.app--lightmode .details-container__info__p,
+.app--lightmode .search-bar__select {
   color: var(--white-dimmed) !important;
 }
 .app--lightmode .header {
