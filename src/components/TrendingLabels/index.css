@@ -12,4 +12,8 @@
   text-decoration: none;
   padding: 0.4rem;
   font-weight: 600;
+  transition: transform 0.2s ease;
+}
+.trends-wrapper__label:hover {
+  transform: scale(1.2);
 }
