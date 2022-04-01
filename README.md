@@ -10,6 +10,8 @@
 
 - Understanding JSX
 
+- UseState, UseMemo, UseReducer
+
 - Getting involved to Routers using wouter.js to create a SPG
 
 - How to create custom hooks
@@ -22,6 +24,6 @@
 
 - To use the Profiler tool of React
 
+- How to save variables on localStorage
+
 ## [Online Demo](https://giffi-baltazar.vercel.app/)
-
-

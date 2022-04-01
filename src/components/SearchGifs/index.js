@@ -3,30 +3,9 @@ import { useCallback } from "react";
 import { useLocation } from "wouter";
 import { useRoute } from "wouter";
 import "./index.css";
+import { useForm } from "./useForm";
 
 const RATINGS = ["g", "pg", "pg-13", "r"];
-const ACTIONS = {
-  SET_RATING: "set-rating",
-  SET_QUERY: "set-query",
-};
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case ACTIONS.SET_RATING:
-      return {
-        ...state,
-        rating: action.payload,
-      };
-    case ACTIONS.SET_QUERY:
-      return {
-        ...state,
-        query: action.payload,
-      };
-
-    default:
-      return state;
-  }
-};
 
 function SearchGifs() {
   const [path, pushLocation] = useLocation();
@@ -37,11 +16,10 @@ function SearchGifs() {
 
   const inputRef = React.createRef();
 
-  const [state, dispatch] = useReducer(reducer, {
-    query: decodeURI(initialKeyword),
-    rating: initialRating,
+  const { query, rating, updateKeyword, updateRating } = useForm({
+    initialKeyword,
+    initialRating,
   });
-  const { query, rating } = state;
 
   const handleSumbit = useCallback(
     (evt) => {
@@ -54,7 +32,11 @@ function SearchGifs() {
   );
 
   const handleChangeRating = (evt) => {
-    dispatch({ type: ACTIONS.SET_RATING, payload: evt.target.value });
+    updateRating(evt.target.value);
+  };
+
+  const handleChangeInput = (evt) => {
+    updateKeyword(evt.target.value);
   };
 
   return (
@@ -64,9 +46,7 @@ function SearchGifs() {
           className="search-bar__input"
           type="text"
           placeholder="Search any GIF here!"
-          onChange={(e) =>
-            dispatch({ type: ACTIONS.SET_QUERY, payload: e.target.value })
-          }
+          onChange={handleChangeInput}
           ref={inputRef}
           value={query}
         />
