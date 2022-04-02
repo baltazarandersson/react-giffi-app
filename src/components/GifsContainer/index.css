@@ -3,7 +3,6 @@
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
   margin-left: -1rem; /* gutter size offset */
-  width: auto;
 }
 .gifs-wrapper--grid_column {
   padding-left: 1rem; /* gutter size */

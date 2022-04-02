@@ -12,8 +12,12 @@ export function DrawerContextProvider({ children }) {
     else document.body.style.overflow = "visible";
   }, [drawerState]);
 
+  function toggleDrawer() {
+    drawerStateUpdate((drawerState) => !drawerState);
+  }
+
   return (
-    <DrawerContext.Provider value={{ drawerState, drawerStateUpdate }}>
+    <DrawerContext.Provider value={{ drawerState, toggleDrawer }}>
       {children}
     </DrawerContext.Provider>
   );

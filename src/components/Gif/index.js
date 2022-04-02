@@ -5,8 +5,6 @@ import "./index.css";
 function Gif({ title, url, id, color }) {
   const [isHover, isHoverUpdate] = useState(false);
 
-  console.log(color);
-
   return (
     <div
       className="gifs-wrapper__gif"

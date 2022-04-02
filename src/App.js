@@ -7,6 +7,8 @@ import SearchResult from "pages/SearchResult/SearchResult";
 import Detials from "pages/Details/Details";
 import { useTheme } from "context/ThemeContext";
 import classNames from "classnames";
+import { Login } from "pages/Login";
+import { Register } from "pages/Register";
 
 function App() {
   const { theme } = useTheme();
@@ -17,7 +19,8 @@ function App() {
       <Route path="/" component={HomePage} />
       <Route path="/search/:keyword/:rating?" component={SearchResult} />
       <Route path="/gif/id/:id" component={Detials} />
-
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
       <Route
         path="/404"
         component={() => (

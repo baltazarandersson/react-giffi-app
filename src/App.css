@@ -30,8 +30,8 @@
 .app--lightmode .gifs-container__h2,
 .app--lightmode .trends-container__h2,
 .app--lightmode .header__logo,
-.app--lightmode .header__auth__login,
-.app--lightmode .header__auth__register {
+.app--lightmode .auth__login,
+.app--lightmode .auth__register {
   background: initial !important;
   background-clip: initial !important;
   -webkit-text-fill-color: initial !important;
