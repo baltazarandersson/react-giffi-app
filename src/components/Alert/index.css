@@ -1,0 +1,33 @@
+.alert {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  box-sizing: border-box;
+  gap: 1rem;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  opacity: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.alert--error {
+  background: rgba(200, 0, 0, 0.5);
+  color: rgba(256, 100, 100, 1);
+  animation: alert-animation 5.1s ease;
+}
+@keyframes alert-animation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

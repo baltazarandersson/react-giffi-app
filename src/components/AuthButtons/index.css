@@ -1,0 +1,5 @@
+.auth__login,
+.auth__register {
+  text-decoration: underline;
+  color: #e4e7ea;
+}
