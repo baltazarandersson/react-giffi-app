@@ -7,10 +7,11 @@ import { useLocation } from "wouter";
 import { GoogleButton } from "components/GoogleButton";
 import { VscChromeClose } from "react-icons/vsc";
 import "./index.css";
+import { useAlertContext } from "context/AlertContext";
 
 const codeErrorFilter = {
   "auth/user-not-found": "Your email is invalid",
-  "auth/invalid-email": "Your email is invalid",
+  "auth/invalid-email": "Your email is invalid or empty",
   "auth/wrong-password": "You password is wrong",
   "auth/popup-closed-by-user": "Closed the pop-up before authentication",
 };
@@ -23,16 +24,7 @@ export function Login() {
     password: "",
   });
 
-  const [error, setError] = useState("");
-  const [showAlert, setShowAlert] = useState(false);
-
-  useEffect(() => {
-    if (showAlert === true) {
-      setTimeout(() => {
-        setShowAlert(false);
-      }, 5000);
-    }
-  }, [showAlert]);
+  const { showAlert, setShowAlert } = useAlertContext();
 
   const { logIn, loginWithGoogle } = useAuthContext();
 
@@ -49,9 +41,19 @@ export function Login() {
     try {
       await logIn(user.email, user.password);
       setLocation("/");
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "success",
+        message: "Login with success",
+      }));
     } catch (error) {
-      setError(codeErrorFilter[error.code]);
-      setShowAlert((showAlert) => !showAlert);
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "error",
+        message: codeErrorFilter[error.code],
+      }));
     }
   }
 
@@ -59,10 +61,19 @@ export function Login() {
     try {
       await loginWithGoogle();
       setLocation("/");
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "success",
+        message: "Login with success",
+      }));
     } catch (error) {
-      console.log(error);
-      setError(codeErrorFilter[error.code]);
-      setShowAlert((showAlert) => !showAlert);
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "error",
+        message: codeErrorFilter[error.code],
+      }));
     }
   }
 
@@ -100,7 +111,6 @@ export function Login() {
           <GoogleButton handleClick={handleGoogleLogin} />
         </form>
       </div>
-      {showAlert ? <Alert type="error" message={error} /> : null}
     </div>
   );
 }

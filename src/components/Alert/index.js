@@ -1,10 +1,10 @@
 import "./index.css";
-import { AiOutlineWarning } from "react-icons/ai";
+import { MdWarningAmber, MdCheck } from "react-icons/md";
 
 export function Alert({ type, message }) {
   return (
     <div className={`alert alert--${type}`}>
-      {type === "error" ? <AiOutlineWarning /> : null}
+      {type === "error" ? <MdWarningAmber /> : <MdCheck />}
       {message}
     </div>
   );

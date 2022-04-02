@@ -1,16 +1,17 @@
-import { Alert } from "components/Alert";
 import { GoogleButton } from "components/GoogleButton";
 import { useAuthContext } from "context/AuthContext";
 import { useSEO } from "hooks/useSEO";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation, Link } from "wouter";
 import { VscChromeClose } from "react-icons/vsc";
 import "./index.css";
+import { useAlertContext } from "context/AlertContext";
 
 const codeErrorFilter = {
-  "auth/invalid-email": "Your email is invalid",
+  "auth/invalid-email": "Your email is invalid or empty",
   "auth/email-already-in-use": "The email is already in use",
   "auth/weak-password": "You password must have 6 characters long",
+  "auth/popup-closed-by-user": "Closed the pop-up before authentication",
 };
 
 export function Register() {
@@ -21,16 +22,7 @@ export function Register() {
     password: "",
   });
 
-  const [error, setError] = useState("");
-  const [showAlert, setShowAlert] = useState(false);
-
-  useEffect(() => {
-    if (showAlert === true) {
-      setTimeout(() => {
-        setShowAlert(false);
-      }, 5000);
-    }
-  }, [showAlert]);
+  const { setShowAlert } = useAlertContext();
 
   const { signUp, loginWithGoogle } = useAuthContext();
 
@@ -46,10 +38,19 @@ export function Register() {
     try {
       await loginWithGoogle();
       setLocation("/");
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "success",
+        message: "Registered with success",
+      }));
     } catch (error) {
-      console.log(error);
-      setError(codeErrorFilter[error.code]);
-      setShowAlert((showAlert) => !showAlert);
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "error",
+        message: codeErrorFilter[error.code],
+      }));
     }
   }
 
@@ -58,9 +59,19 @@ export function Register() {
     try {
       await signUp(user.email, user.password);
       setLocation("/");
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "success",
+        message: "Registered with success",
+      }));
     } catch (error) {
-      setError(codeErrorFilter[error.code]);
-      setShowAlert(true);
+      setShowAlert((showAlert) => ({
+        ...showAlert,
+        show: true,
+        type: "error",
+        message: codeErrorFilter[error.code],
+      }));
     }
   }
   return (
@@ -100,7 +111,6 @@ export function Register() {
           <GoogleButton handleClick={handleGoogleLogin} />
         </form>
       </div>
-      {showAlert ? <Alert type="error" message={error} /> : null}
     </div>
   );
 }

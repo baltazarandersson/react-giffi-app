@@ -9,10 +9,14 @@ import { useTheme } from "context/ThemeContext";
 import classNames from "classnames";
 import { Login } from "pages/Login";
 import { Register } from "pages/Register";
+import { useAlertContext } from "context/AlertContext";
+import { Alert } from "components/Alert";
 
 function App() {
   const { theme } = useTheme();
+  const { showAlert } = useAlertContext();
 
+  console.log(showAlert);
   return (
     <div className={classNames("app", { "app--lightmode": !theme })}>
       <Header />
@@ -35,6 +39,9 @@ function App() {
           </h1>
         )}
       />
+      {showAlert.show ? (
+        <Alert type={showAlert.type} message={showAlert.message} />
+      ) : null}
     </div>
   );
 }
