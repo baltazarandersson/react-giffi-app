@@ -3,7 +3,8 @@ import { GoogleButton } from "components/GoogleButton";
 import { useAuthContext } from "context/AuthContext";
 import { useSEO } from "hooks/useSEO";
 import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
+import { VscChromeClose } from "react-icons/vsc";
 import "./index.css";
 
 const codeErrorFilter = {
@@ -63,39 +64,42 @@ export function Register() {
     }
   }
   return (
-    <div style={{ display: "flex", width: "100%" }}>
-      <div className="register">
-        <form className="register__form" onSubmit={handleSumbit}>
-          <div className="register__form__email">
+    <div className="register-container">
+      <Link to="/">
+        <div className="register-container__close-button">
+          <VscChromeClose size={"25px"} />
+        </div>
+      </Link>
+      <div className="register-container__auth">
+        <form
+          className="register-container__auth__form"
+          onSubmit={handleSumbit}
+        >
+          <div className="register-container__auth__form__email">
             <label htmlFor="email">{"Email"}</label>
             <input
-              className="register__form__input"
+              className="register-container__auth__form__input"
               onChange={handleChange}
               type="email"
               name="email"
               placeholder="example@example.com"
             />
           </div>
-          <div className="register__form__password">
+          <div className="register-container__auth__form__password">
             <label htmlFor="password">{"Password"}</label>
             <input
-              className="register__form__input"
+              className="register-container__auth__form__input"
               onChange={handleChange}
               type="password"
               name="password"
             />
           </div>
-          <button className="register__form__button">
-            {"Register account"}
+          <button className="register-container__auth__form__button">
+            {"Register"}
           </button>
           <GoogleButton handleClick={handleGoogleLogin} />
         </form>
       </div>
-      <img
-        className="register-background"
-        alt="register-background"
-        src="https://media1.giphy.com/media/ml99VqtqTAdPy/giphy.gif?cid=f0ffccdefb476a780197b0ffaee2acac220758e47ef948d2&rid=giphy.gif&ct=g"
-      />
       {showAlert ? <Alert type="error" message={error} /> : null}
     </div>
   );

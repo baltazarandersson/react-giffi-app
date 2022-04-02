@@ -1,9 +1,11 @@
 import { Alert } from "components/Alert";
+import { Link } from "wouter";
 import { useAuthContext } from "context/AuthContext";
 import { useSEO } from "hooks/useSEO";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { GoogleButton } from "components/GoogleButton";
+import { VscChromeClose } from "react-icons/vsc";
 import "./index.css";
 
 const codeErrorFilter = {
@@ -65,37 +67,39 @@ export function Login() {
   }
 
   return (
-    <div style={{ display: "flex", width: "100%" }}>
-      <div className="login">
-        <form className="login__form" onSubmit={handleSumbit}>
-          <div className="login__form__email">
+    <div className="login-container">
+      <Link to="/">
+        <div className="login-container__close-button">
+          <VscChromeClose size={"25px"} />
+        </div>
+      </Link>
+      <div className="login-container__auth">
+        <form className="login-container__auth__form" onSubmit={handleSumbit}>
+          <div className="login-container__auth__form__email">
             <label htmlFor="email">{"Email"}</label>
             <input
-              className="login__form__input"
+              className="login-container__auth__form__input"
               onChange={handleChange}
               type="email"
               name="email"
               placeholder="example@example.com"
             />
           </div>
-          <div className="login__form__password">
+          <div className="login-container__auth__form__password">
             <label htmlFor="password">{"Password"}</label>
             <input
-              className="login__form__input"
+              className="login-container__auth__form__input"
               onChange={handleChange}
               type="password"
               name="password"
             />
           </div>
-          <button className="login__form__button">{"Login"}</button>
+          <button className="login-container__auth__form__button">
+            {"Login"}
+          </button>
           <GoogleButton handleClick={handleGoogleLogin} />
         </form>
       </div>
-      <img
-        className="login-background"
-        alt="login-background"
-        src="https://media4.giphy.com/media/Y4vip84hg9BhdNidTR/giphy.gif?cid=f0ffccde376a579f0fae781a3f3c13242588aed65a3ae934&rid=giphy.gif&ct=g"
-      />
       {showAlert ? <Alert type="error" message={error} /> : null}
     </div>
   );

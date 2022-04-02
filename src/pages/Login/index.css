@@ -1,25 +1,39 @@
-.login {
-  height: calc(100vh - 11rem);
-  z-index: 1;
+.login-container {
+  background-image: url("https://media4.giphy.com/media/Y4vip84hg9BhdNidTR/giphy.gif?cid=f0ffccde376a579f0fae781a3f3c13242588aed65a3ae934&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.login-container__auth {
+  height: 100%;
+  box-sizing: border-box;
   width: 50%;
   backdrop-filter: blur(2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 0rem;
-  text-align: start;
+  z-index: 100;
 }
 
-.login__form {
+.login-container__auth__form {
   display: flex;
   flex-direction: column;
   width: 300px;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
+  text-align: start;
   height: 100%;
+  gap: 1rem;
 }
-.login__form__email,
-.login__form__password {
+.login-container__auth__form__email,
+.login-container__auth__form__password {
   font-weight: 900;
   width: 100%;
   box-sizing: border-box;
@@ -28,7 +42,7 @@
   margin: 0px;
   padding: 0px;
 }
-.login__form__input {
+.login-container__auth__form__input {
   width: 100%;
   height: 48px;
   font-family: inherit;
@@ -41,8 +55,9 @@
   padding-left: 1rem;
   font-weight: bold;
   font-size: 1rem;
+  transition: transform 0.4s ease;
 }
-.login__form__button {
+.login-container__auth__form__button {
   width: 100%;
   height: 48px;
   font-family: inherit;
@@ -51,19 +66,38 @@
   border: none;
   font-weight: bold;
   font-size: 1.2rem;
+  margin-top: 4rem;
+  transition: transform 0.4s ease;
 }
-.login-background {
-  object-fit: cover;
+.login-container__auth__form__input:focus {
+  transform: scale(1.1);
+}
+.login-container__auth__form__button:hover {
+  transform: scale(1.1);
+}
+.login-container__close-button {
   position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  left: 1rem;
+  top: 1rem;
+  border-radius: 50%;
+  color: rgba(256, 256, 256, 0.8);
+  background: rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 720px) {
-  .login {
+
+@media screen and (max-width: 960px) {
+  .login-container__auth {
     width: 100%;
-    height: calc(100vh - 13rem);
+  }
+  .login-container__close-button {
+    left: auto;
+    right: 1rem;
   }
 }
