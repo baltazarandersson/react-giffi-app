@@ -1,4 +1,5 @@
 .login-container {
+  background-color: var(--dark-main);
   background-image: url("https://media4.giphy.com/media/Y4vip84hg9BhdNidTR/giphy.gif?cid=f0ffccde376a579f0fae781a3f3c13242588aed65a3ae934&rid=giphy.gif&ct=g");
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,6 +91,9 @@
   border-radius: 50%;
   color: rgba(256, 256, 256, 0.8);
   background: rgba(0, 0, 0, 0.2);
+}
+.login-container__close-button:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 960px) {

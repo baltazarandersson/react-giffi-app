@@ -1,4 +1,5 @@
 .register-container {
+  background-color: var(--dark-main);
   background-image: url("https://media1.giphy.com/media/ml99VqtqTAdPy/giphy.gif?cid=f0ffccdefb476a780197b0ffaee2acac220758e47ef948d2&rid=giphy.gif&ct=g");
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,7 +92,9 @@
   color: rgba(256, 256, 256, 0.8);
   background: rgba(0, 0, 0, 0.2);
 }
-
+.register-container__close-button:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
 @media screen and (max-width: 960px) {
   .register-container__auth {
     width: 100%;

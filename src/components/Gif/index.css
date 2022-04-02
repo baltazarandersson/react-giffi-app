@@ -9,6 +9,24 @@
 .gifs-wrapper__gif__link {
   display: flex;
 }
+.gifs-wrapper__gif__favorite {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  top: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 2rem;
+  height: 2rem;
+}
+.gifs-wrapper__gif__favorite:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
 .gifs-wrapper__gif__img {
   cursor: pointer;
   width: 100%;

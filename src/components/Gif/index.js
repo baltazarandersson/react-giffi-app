@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
+import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import "./index.css";
 
 function Gif({ title, url, id, color }) {
@@ -20,6 +21,9 @@ function Gif({ title, url, id, color }) {
         </div>
         <img className="gifs-wrapper__gif__img" src={url} key={id} alt="gif" />
       </Link>
+      <button className="gifs-wrapper__gif__favorite">
+        <MdFavoriteBorder size={"2rem"} />
+      </button>
     </div>
   );
 }
