@@ -1,10 +1,17 @@
-.alert {
+.alert-container {
   z-index: 101;
   position: fixed;
-  display: flex;
-  align-items: center;
-  height: 48px;
+  width: 100%;
+  padding: 0rem 2rem;
   box-sizing: border-box;
+  display: flex;
+  bottom: 2rem;
+}
+
+.alert {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
   gap: 1rem;
   padding: 0.5rem 1rem;
   opacity: 1;
@@ -16,15 +23,12 @@
   background: rgba(100, 0, 0, 0.8);
   color: rgba(256, 100, 100, 1);
   animation: alert-animation 5.1s ease;
-  bottom: 2rem;
-  right: 2rem;
+  margin: 0 0 0 auto;
 }
 .alert--success {
   background: rgba(0, 100, 0, 0.8);
   color: rgba(100, 256, 100, 1);
   animation: alert-animation 5.1s ease;
-  bottom: 2rem;
-  left: 2rem;
 }
 @keyframes alert-animation {
   0% {
