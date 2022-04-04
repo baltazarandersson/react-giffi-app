@@ -6,6 +6,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  getAdditionalUserInfo,
 } from "firebase/auth";
 import { auth, db } from "../firebase/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
@@ -21,7 +22,7 @@ export function AuthContextProvider({ children }) {
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password).then(
       async (response) => {
-        await setDoc(doc(db, "users", `${response.user}`), {});
+        await setDoc(doc(db, "users", `${response.user.uid}`), {});
       }
     );
   };
@@ -37,15 +38,14 @@ export function AuthContextProvider({ children }) {
 
   const loginWithGoogle = async () => {
     const googleProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleProvider).then(async (response) => {
-      await setDoc(doc(db, "users", `${response.user}`), {});
+    await signInWithPopup(auth, googleProvider).then(async (response) => {
+      if (getAdditionalUserInfo(response).isNewUser) {
+        await setDoc(doc(db, "users", `${response.user.uid}`), {});
+      }
     });
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) setUser(currentUser.uid);
-    });
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;

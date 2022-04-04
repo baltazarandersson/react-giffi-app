@@ -17,22 +17,26 @@ export function Fav({ id, gif }) {
       if (favs) {
         setIsFav(favs.some((favourite) => favourite.id === id));
       }
+    } else {
+      setIsFav(false);
     }
   }, [favs, id, user]);
 
   async function handleClick() {
     if (user) {
-      if (isFav) {
-        try {
-          await updateDoc(userRef, { favorites: arrayRemove(gif) });
-          setIsFav(!isFav);
-          setFavs((prevFavs) => prevFavs.filter((gif) => gif.id !== id));
-        } catch (error) {}
-      } else {
+      if (!isFav) {
         try {
           await updateDoc(userRef, { favorites: arrayUnion(gif) });
           setIsFav(!isFav);
           setFavs([...favs, gif]);
+        } catch (error) {
+          throw new Error(error);
+        }
+      } else {
+        await updateDoc(userRef, { favorites: arrayRemove(gif) });
+        setIsFav(!isFav);
+        setFavs((prevFavs) => prevFavs.filter((gif) => gif.id !== id));
+        try {
         } catch (error) {
           throw new Error(error);
         }
@@ -42,9 +46,9 @@ export function Fav({ id, gif }) {
     }
   }
 
-  function handleClose() {
+  const handleClose = () => {
     setShowModal(false);
-  }
+  };
 
   return (
     <>

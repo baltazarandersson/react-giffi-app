@@ -12,7 +12,7 @@ const codeErrorFilter = {
   "auth/popup-closed-by-user": "Closed the pop-up before authentication",
 };
 
-export function LoginForm({ closeModal }) {
+export function LoginForm({ closeModal } = false) {
   const [location, setLocation] = useLocation();
 
   const [userCredentials, setUserCredentials] = useState({
@@ -24,11 +24,6 @@ export function LoginForm({ closeModal }) {
 
   const { logIn, loginWithGoogle } = useAuthContext();
 
-  useSEO({
-    title: "Login",
-    description: "Login to your own account on GIFFI",
-  });
-
   const handleChange = ({ target: { name, value } }) =>
     setUserCredentials({ ...userCredentials, [name]: value });
 
@@ -37,7 +32,7 @@ export function LoginForm({ closeModal }) {
     try {
       await logIn(userCredentials.email, userCredentials.password);
       setLocation("/");
-      closeModal();
+      closeModal && closeModal();
       setShowAlert((showAlert) => ({
         ...showAlert,
         show: true,
@@ -58,7 +53,7 @@ export function LoginForm({ closeModal }) {
     try {
       await loginWithGoogle();
       setLocation("/");
-      closeModal();
+      closeModal && closeModal();
       setShowAlert((showAlert) => ({
         ...showAlert,
         show: true,
@@ -72,6 +67,7 @@ export function LoginForm({ closeModal }) {
         type: "error",
         message: codeErrorFilter[error.code],
       }));
+      throw new Error(error);
     }
   }
 
