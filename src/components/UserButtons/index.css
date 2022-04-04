@@ -1,0 +1,35 @@
+.user__login,
+.user__register {
+  text-decoration: underline;
+  color: #e4e7ea;
+}
+.user__favorites {
+  display: flex;
+  align-items: center;
+  color: var(--dark-gray);
+  height: 34px;
+  padding: 0rem 1rem;
+  border-radius: 34px;
+  gap: 0.5rem;
+  background: #ffd700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.user__favorites:hover {
+  transform: scale(1.1);
+}
+.user__favorites__p {
+  display: inline;
+}
+.user__favorites__p--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .user__favorites__p {
+    display: none;
+  }
+  .user__favorites__p--mobile {
+    display: inline;
+  }
+}
