@@ -17,6 +17,9 @@
   align-items: center;
   flex-direction: column;
 }
+.body * {
+  -webkit-tap-highlight-color: transparent;
+}
 
 @media screen and (max-width: 720px) {
   .app {

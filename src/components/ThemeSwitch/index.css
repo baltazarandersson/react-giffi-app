@@ -4,7 +4,6 @@
   position: relative;
   width: 60px;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .switch__input {
