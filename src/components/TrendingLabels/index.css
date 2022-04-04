@@ -5,6 +5,10 @@
   gap: 1rem;
   box-sizing: border-box;
 }
+.app-content .trends-wrapper {
+  position: sticky;
+  top: 7rem;
+}
 .trends-wrapper__label {
   display: flex;
   align-items: center;

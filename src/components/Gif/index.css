@@ -17,7 +17,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  color: white;
+  color: rgba(256, 50, 50, 1);
   top: 4px;
   right: 4px;
   background: rgba(0, 0, 0, 0.6);
