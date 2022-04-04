@@ -1,22 +1,31 @@
-.drawer-menu {
-  transition: left 0.3s ease;
-  background-color: var(--dark-main);
-  position: fixed;
-  box-sizing: border-box;
+.drawer-toggle-observer.true {
+  position: absolute;
+  left: 0;
   top: 0;
-  left: 110%;
-  width: 70%;
-  height: 120%;
-  z-index: 99;
-  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 98;
+}
+.drawer-menu {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transition: left 0.3s ease;
+  background-color: var(--dark-main);
+  box-sizing: border-box;
+  z-index: 99;
+  top: 0;
+  left: 110%;
+  width: 70%;
+  height: 120%;
+  padding: 1rem;
   box-shadow: 0px 0px 5px gray;
 }
 .menu-icon,
 .drawer-icon {
+  cursor: pointer;
   height: 48px;
   color: #d7e1ec;
 }

@@ -15,20 +15,32 @@ export default function Drawer() {
   return (
     <div className="drawer">
       <HiMenu className="menu-icon" size={48} onClick={handleClick}></HiMenu>
-      <div className={`drawer-menu ${drawerState}`}>
-        <div className="drawer-header">
-          <HiOutlineX
-            className="drawer-icon"
-            size={48}
-            onClick={handleClick}
-          ></HiOutlineX>
+      <div
+        className={`drawer-toggle-observer ${drawerState}`}
+        onClick={() => {
+          toggleDrawer();
+        }}
+      >
+        <div
+          className={`drawer-menu ${drawerState}`}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <div className="drawer-header">
+            <HiOutlineX
+              className="drawer-icon"
+              size={48}
+              onClick={handleClick}
+            ></HiOutlineX>
 
-          <div className="drawer-menu__auth">
-            <ThemeSwitch></ThemeSwitch>
-            <UserButtons handleClick={handleClick} />
+            <div className="drawer-menu__auth">
+              <ThemeSwitch></ThemeSwitch>
+              <UserButtons handleClick={handleClick} />
+            </div>
           </div>
+          <TrendingBox></TrendingBox>
         </div>
-        <TrendingBox></TrendingBox>
       </div>
     </div>
   );
