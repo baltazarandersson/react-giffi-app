@@ -18,7 +18,11 @@
   flex-direction: column;
 }
 button,
-a {
+a,
+label,
+input,
+div,
+input {
   -webkit-tap-highlight-color: transparent;
 }
 
