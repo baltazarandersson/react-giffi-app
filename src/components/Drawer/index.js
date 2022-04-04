@@ -3,7 +3,7 @@ import { useDrawer } from "context/DrawerContext";
 import ThemeSwitch from "components/ThemeSwitch";
 import TrendingBox from "components/TrendingBox";
 import "./index.css";
-import { AuthButtons } from "components/AuthButtons";
+import { UserButtons } from "components/UserButtons";
 
 export default function Drawer() {
   const { drawerState, toggleDrawer } = useDrawer();
@@ -25,7 +25,7 @@ export default function Drawer() {
 
           <div className="drawer-menu__auth">
             <ThemeSwitch></ThemeSwitch>
-            <AuthButtons handleClick={handleClick} />
+            <UserButtons handleClick={handleClick} />
           </div>
         </div>
         <TrendingBox></TrendingBox>

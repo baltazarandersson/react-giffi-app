@@ -4,8 +4,8 @@
   position: fixed;
   box-sizing: border-box;
   top: 0;
-  left: 100%;
-  width: 100%;
+  left: 110%;
+  width: 70%;
   height: 120%;
   z-index: 99;
   padding: 1rem;
@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 0px 0px 5px gray;
 }
 .menu-icon,
 .drawer-icon {
@@ -20,7 +21,7 @@
   color: #d7e1ec;
 }
 .drawer-menu.true {
-  left: 0;
+  left: 30%;
 }
 .drawer-header {
   width: 100%;
@@ -29,10 +30,27 @@
   margin-bottom: 2rem;
 }
 .drawer-menu__auth {
-  gap: 1rem;
+  display: flex;
+  font-weight: bold;
+  text-align: end;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
 }
-@media screen and (max-width: 45rem) {
+
+@media screen and (max-width: 720px) {
+  .drawer-menu {
+    width: 100%;
+  }
+  .drawer-menu.true {
+    left: 0;
+  }
   #lazytrend {
     max-width: 100%;
+  }
+  .drawer-menu__auth {
+    gap: 0rem;
+    justify-content: space-between;
+    width: 80%;
   }
 }

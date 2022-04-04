@@ -1,10 +1,28 @@
 #favorites-wrapper {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 2rem;
   padding: 2rem;
   box-sizing: border-box;
 }
+#favorites-wrapper .gifs-wrapper {
+  justify-content: center;
+}
+
+.favorites-wrapper__h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: start;
+  margin: 0px;
+  background: var(--white-background);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media screen and (max-width: 720px) {
   #favorites-wrapper {
+    width: 100%;
     padding: 1rem;
   }
 }

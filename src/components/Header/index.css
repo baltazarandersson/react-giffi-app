@@ -34,8 +34,7 @@
   justify-content: flex-end;
 }
 
-.header__auth,
-.drawer-menu__auth {
+.header__auth {
   display: flex;
   font-weight: bold;
   text-align: end;
@@ -52,6 +51,12 @@
   .header__auth .switch {
     display: none;
   }
+  .drawer {
+    display: block;
+  }
+  .header__auth {
+    display: none;
+  }
 }
 @media screen and (max-width: 720px) {
   .header {
@@ -64,11 +69,5 @@
   .header__div--2 {
     order: 1;
     width: 100%;
-  }
-  .header__auth {
-    display: none;
-  }
-  .drawer {
-    display: block;
   }
 }

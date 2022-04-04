@@ -5,7 +5,6 @@
   position: relative;
   height: fit-content;
   overflow: hidden;
-  min-width: 200px;
 }
 .gifs-wrapper__gif__link {
   display: flex;

@@ -8,7 +8,7 @@ export function Fav({ id, gif }) {
   const { user, favs, setFavs } = useAuthContext();
   const [isFav, setIsFav] = useState(false);
 
-  const userRef = user ? doc(db, `users/${user.uid}`) : null;
+  const userRef = user ? doc(db, `users/${user}`) : null;
 
   useEffect(() => {
     if (user) {

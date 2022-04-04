@@ -28,10 +28,11 @@
   background: var(--white-dimmed) !important;
 }
 .app--lightmode .gifs-container__h2,
+.app--lightmode .favorites-wrapper__h2,
 .app--lightmode .trends-container__h2,
 .app--lightmode .header__logo,
-.app--lightmode .auth__login,
-.app--lightmode .auth__register {
+.app--lightmode .user__login,
+.app--lightmode .user__register {
   background: initial !important;
   background-clip: initial !important;
   -webkit-text-fill-color: initial !important;

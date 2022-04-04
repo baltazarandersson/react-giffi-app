@@ -3,7 +3,7 @@ import SearchGifs from "components/SearchGifs";
 import ThemeSwitch from "components/ThemeSwitch";
 import Drawer from "components/Drawer";
 import "./index.css";
-import { AuthButtons } from "components/AuthButtons";
+import { UserButtons } from "components/UserButtons";
 
 export default function Header() {
   return (
@@ -21,7 +21,7 @@ export default function Header() {
       <div className="header__div header__div--3">
         <div className="header__auth">
           <ThemeSwitch></ThemeSwitch>
-          <AuthButtons />
+          <UserButtons />
         </div>
         <Drawer></Drawer>
       </div>

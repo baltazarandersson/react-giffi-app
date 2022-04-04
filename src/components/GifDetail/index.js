@@ -57,9 +57,11 @@ export default function GifDetail({ params }) {
       </div>
       <div className="details-container__info">
         <h2 className="details-container__info__h2">{title}</h2>
-        <p className="details-container__info__p">{date}</p>
+        <p className="details-container__info__p">
+          <strong>{"Published date : " + date.split(" ")[0]}</strong>
+        </p>
         <a className="details-container__info__a" href={bitly_url}>
-          source
+          GIPHY Link
         </a>
       </div>
     </div>

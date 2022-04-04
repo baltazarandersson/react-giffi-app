@@ -21,7 +21,7 @@ export function AuthContextProvider({ children }) {
   const signUp = async (email, password) => {
     await createUserWithEmailAndPassword(auth, email, password).then(
       async (response) => {
-        await setDoc(doc(db, "users", `${response.user.uid}`), {});
+        await setDoc(doc(db, "users", `${response.user}`), {});
       }
     );
   };
@@ -38,17 +38,27 @@ export function AuthContextProvider({ children }) {
   const loginWithGoogle = async () => {
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider).then(async (response) => {
-      await setDoc(doc(db, "users", `${response.user.uid}`), {});
+      await setDoc(doc(db, "users", `${response.user}`), {});
     });
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => setUser(currentUser));
+    onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) setUser(currentUser.uid);
+    });
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        setUser(uid);
+      } else {
+        setUser(null);
+      }
+    });
   }, []);
 
   useEffect(() => {
     if (!user) return setFavs([]);
-    const favRef = doc(db, `users/${user.uid}`);
+    const favRef = doc(db, `users/${user}`);
     getDoc(favRef).then((doc) => {
       const userFavs = doc.data().favorites;
       if (userFavs) {
