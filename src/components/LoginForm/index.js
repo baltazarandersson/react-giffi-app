@@ -12,7 +12,7 @@ const codeErrorFilter = {
   "auth/popup-closed-by-user": "Closed the pop-up before authentication",
 };
 
-export function LoginForm() {
+export function LoginForm({ closeModal }) {
   const [location, setLocation] = useLocation();
 
   const [userCredentials, setUserCredentials] = useState({
@@ -37,6 +37,7 @@ export function LoginForm() {
     try {
       await logIn(userCredentials.email, userCredentials.password);
       setLocation("/");
+      closeModal();
       setShowAlert((showAlert) => ({
         ...showAlert,
         show: true,
@@ -57,6 +58,7 @@ export function LoginForm() {
     try {
       await loginWithGoogle();
       setLocation("/");
+      closeModal();
       setShowAlert((showAlert) => ({
         ...showAlert,
         show: true,
