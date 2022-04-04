@@ -48,7 +48,6 @@ function SearchGifs() {
           placeholder="Search any GIF here!"
           onChange={handleChangeInput}
           ref={inputRef}
-          value={query}
         />
         <select
           className="search-bar__select"
