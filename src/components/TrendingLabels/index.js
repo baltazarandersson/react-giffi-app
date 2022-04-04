@@ -7,7 +7,7 @@ import "./index.css";
 
 export default function TrendingLabels() {
   const [trends, setTrends] = useState([]);
-  const { drawerStateUpdate } = useDrawer();
+  const { toggleDrawer } = useDrawer();
 
   useEffect(() => {
     getTrendingLabels().then(setTrends);
@@ -26,7 +26,7 @@ export default function TrendingLabels() {
           <Link
             onClick={() => {
               window.scrollTo(0, 0);
-              drawerStateUpdate(false);
+              toggleDrawer();
             }}
             style={linkStyles[idx]}
             className="trends-wrapper__label"
