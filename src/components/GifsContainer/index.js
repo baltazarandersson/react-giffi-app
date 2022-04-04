@@ -5,6 +5,7 @@ import "./index.css";
 
 export default function GifsContainer({ gifs }) {
   const ids = gifs.map((o) => o.id);
+
   const gifsFiltered = gifs.filter(
     ({ id }, index) => !ids.includes(id, index + 1)
   );

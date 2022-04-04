@@ -5,6 +5,7 @@
   position: relative;
   height: fit-content;
   overflow: hidden;
+  min-width: 200px;
 }
 .gifs-wrapper__gif__link {
   display: flex;
@@ -43,11 +44,9 @@
   bottom: 0px;
   opacity: 0;
 }
-.gifs-wrapper__gif:hover .gifs-wrapper__gif__title {
-  opacity: 1;
-}
 @media screen and (max-width: 720px) {
   .gifs-wrapper__gif {
+    min-width: initial;
     box-shadow: none !important;
   }
   .gifs-wrapper__gif__title {

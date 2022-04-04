@@ -11,12 +11,12 @@ import { Login } from "pages/Login";
 import { Register } from "pages/Register";
 import { useAlertContext } from "context/AlertContext";
 import { Alert } from "components/Alert";
+import { Favorites } from "pages/Favorites";
 
 function App() {
   const { theme } = useTheme();
   const { showAlert } = useAlertContext();
 
-  console.log(showAlert);
   return (
     <div className={classNames("app", { "app--lightmode": !theme })}>
       <Header />
@@ -25,6 +25,8 @@ function App() {
       <Route path="/gif/id/:id" component={Detials} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <Route path="/favorites" component={Favorites} />
+
       <Route
         path="/404"
         component={() => (

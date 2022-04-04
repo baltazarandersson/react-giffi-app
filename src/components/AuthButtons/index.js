@@ -15,9 +15,18 @@ export function AuthButtons() {
   return (
     <>
       {user ? (
-        <Link onClick={handleLogOut} className="auth__login" to="/">
-          Logout
-        </Link>
+        <>
+          <Link
+            className="auth__login"
+            onClick={() => (drawerState ? toggleDrawer() : "")}
+            to="/favorites"
+          >
+            Favorites
+          </Link>
+          <Link onClick={handleLogOut} className="auth__login" to="/">
+            Logout
+          </Link>
+        </>
       ) : (
         <>
           <Link

@@ -1,0 +1,10 @@
+#favorites-wrapper {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 720px) {
+  #favorites-wrapper {
+    padding: 1rem;
+  }
+}
