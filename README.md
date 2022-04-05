@@ -10,7 +10,7 @@
 
 - Understanding JSX
 
-- UseState, UseMemo, UseReducer
+- UseState, UseMemo, UseReducer, ReactDOM.createPortal
 
 - Getting involved to Routers using wouter.js to create a SPG
 
@@ -25,5 +25,9 @@
 - To use the Profiler tool of React
 
 - How to save variables on localStorage
+
+- Register and login of users with firebase
+
+- Add and read documents, collections and data in firestore
 
 ## [Online Demo](https://giffi-baltazar.vercel.app/)

@@ -26,14 +26,26 @@ export function Fav({ id, gif }) {
     if (user) {
       if (!isFav) {
         try {
-          await updateDoc(userRef, { favorites: arrayUnion(gif) });
+          await updateDoc(userRef, {
+            favorites: arrayUnion({
+              id: gif.id,
+              title: gif.title,
+              url: gif.url,
+            }),
+          });
           setIsFav(!isFav);
           setFavs([...favs, gif]);
         } catch (error) {
           throw new Error(error);
         }
       } else {
-        await updateDoc(userRef, { favorites: arrayRemove(gif) });
+        await updateDoc(userRef, {
+          favorites: arrayRemove({
+            id: gif.id,
+            title: gif.title,
+            url: gif.url,
+          }),
+        });
         setIsFav(!isFav);
         setFavs((prevFavs) => prevFavs.filter((gif) => gif.id !== id));
         try {
