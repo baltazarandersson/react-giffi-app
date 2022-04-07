@@ -7,7 +7,7 @@
 }
 .app-content .trends-wrapper {
   position: sticky;
-  top: 7rem;
+  top: 2rem;
 }
 .trends-wrapper__label {
   display: flex;

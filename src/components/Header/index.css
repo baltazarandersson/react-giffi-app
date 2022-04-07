@@ -1,4 +1,5 @@
 .header {
+  transition: top 0.2s ease-in-out;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -11,6 +12,9 @@
   background: var(--dark-main);
   z-index: 98;
   top: 0;
+}
+.header--hidden {
+  top: -9rem;
 }
 .header__logo {
   font-family: "Red Hat Display", sans-serif;
